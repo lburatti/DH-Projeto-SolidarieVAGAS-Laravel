@@ -20,24 +20,24 @@
                         <label for="inputEmail4">Email</label>
                         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                     </div>
-                    <div class="form-group col-md-.6">
-                        <label for="inputPassword4">senha </label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Senha </label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Digite uma senha ">
                     </div>
-                    <div class="form-group col-md-.6">
-                        <label for="inputPassword4">Nome da ong</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="nome ">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nome da ONG</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Nome ">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputAddress">CNPJ</label>
                         <input type="text" class="form-control" id="inputAddress" placeholder="00.000.000/0000-00">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="inputCity">City</label>
+                        <label for="inputCity">Cidade</label>
                         <input type="text" class="form-control" id="inputCity"placeholder="Cabo Frio ">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="inputState">State</label>
+                        <label for="inputState">Estado</label>
                         <select id="inputState" class="form-control">
                         <option selected> estado </option> 
                     <option> São Paulo</option>
@@ -47,30 +47,28 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
-                        Check me out
+                        <h6>Check me out </h6><br>
                         </label>
                     </div>
-                    <!-- <div class="form-check"> -->
+                    <div class="form-check">
                     <button type="submit" class="btn btn-primary">emviar</button>
                     </div>
                 </div>
-                
             </form>
             </div>
-            <article class=" ">
-                 <div class=" col-4 ">
+            <article class=" row ">
+                 <div class=" col-6 ">
                     <article class=" conteiner-fluid ">
                         <h2>dados das pessoas</h2>
                         <div class="form-group ">
                             <label for="detalhes" class="com-sombra"><b>Habilidades</b></label>
-                            <textarea class="form-control" id="detalhes" name="detalhes" rows="4"></textarea>
+                            <textarea class="form-control" id="detalhes" name="detalhes" rows="4 row"></textarea>
                         </div>
-                        <H2>habilidades</H2>
                     </article>
                 </div>
-                <div class="col-4">
-                     <article >
-                         <h2>dados das pessoas</h2>
+                <div class="col-6 ">
+                     <article  >
+                         <h2>sobre </h2>
                          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem fugiat saepe architecto necessitatibus quas atque totam ut, autem dolores sint, doloremque quos odit? Deserunt, suscipit enim. Ipsa, officiis inventore.</h5>
                      </article>
                 </div>
