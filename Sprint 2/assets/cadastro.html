@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SolidarieVAGAS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- HEADER: Logo + menu (com itens à definir) -->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo2.png" alt="Logo" height="100" width="100">
+            </a>
+            <!-- Itens do menu principal: -->
+            <div class="d-flex flex-row ml-auto">
+                <div class="dropdown mx-1">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Quero participar!
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">
+                            <a href="busca.html">Busque um profissional</a>
+                        </button>
+                        <button class="dropdown-item" type="button">
+                            <a href="cadastro.html">Cadastre sua ONG</a>
+                        </button>
+                        <button class="dropdown-item" type="button">
+                            <a href="parceiros.html">Seja parceiro, cadastre-se!</a>
+                        </button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    <a href="login.html" class="login">Login</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+
+        <!-- Section 1 - título e texto explicativo -->
+        <section class="container my-3 text-center">
+            <div class="jumbotron my-2 py-2 ongs">
+                <h1 class="display-4 text-center pb-4 alert alert-warning ongs">Faça seu cadastro</h1>
+                <p class="lead text-justify ongs">Texto falando sobre as vantagens de se cadastrar e cadastrar os
+                    profissionais disponíveis na ONG. A importância de recolocar essas pessoas no mercado de trabalho,
+                    seja como CLT, freela, serviços temporários...</p>
+            </div>
+        </section>
+
+        <!-- Section 2 - formulário de cadastro -->
+        <section class="container my-3">
+            <article class="d-flex justify-content-center ">
+                <form class="col-12">
+                    <div class="form-group col-sm">
+                        <label for="nomeOng">Nome da ONG</label>
+                        <input type="password" class="form-control" name="nomeOng" id="nomeOng"
+                            placeholder="Nome da ONG">
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control" name="cnpj" id="cnpj" placeholder="00.000.000/0000-00">
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="classificacaoOng">Classificação da ONG (colocar dropdown/select)</label>
+                        <select name="classificacaoOng" id="classificacaoOng" class="form-control">
+                            <option value="" selected>Escolha uma opção</option>
+                            <option value="">Idosos</option>
+                            <option value="">Crianças carentes</option>
+                            <option value="">Ex-presidiários</option>
+                            <option value="">Ex-usuários de drogas</option>
+                            <option value="">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="textareaOng">Conte mais sobre a ONG</label>
+                        <textarea class="form-control" name="textareaOng" id="textareaOng" cols="10" rows="5"
+                            placeholder="Escreva mais sobre o serviços prestados em sua ONG.."></textarea>
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="enderecoOng">Endereço da ONG</label>
+                        <input type="text" class="form-control" name="enderecoOng" id="enderecoOng"
+                            placeholder="Rua nome da rua, 1111">
+                    </div>
+                    <div class="form-row col-sm">
+                        <div class="form-group col-md-4">
+                            <label for="cidadeOng">Cidade</label>
+                            <input type="text" class="form-control" id="cidadeOng" placeholder="São Paulo">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="estadoOng">Estado </label>
+                            <input type="text" class="form-control" id="estadoOng" placeholder="SP">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="cepOng">CEP</label>
+                            <input type="text" class="form-control" id="cepOng" placeholder="00000-000">
+                        </div>
+                    </div>
+                    <div class="form-row col-sm">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Senha </label>
+                            <input type="password" class="form-control" id="inputPassword4"
+                                placeholder="Digite uma senha ">
+                        </div>
+                    </div>
+                    <div class="jumbotron my-2 py-2 ongs">
+                        <p class="lead ongs text-center pt-2">Inclusão de profissionais:</p>
+                    </div>
+                    <div class="form-row col-sm">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="cpf" class="form-control" id="cpf" placeholder="000.000.000-00">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="idade">Idade</label>
+                            <input type="text" name="idade" class="form-control" id="idade" placeholder="30 anos">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="profissao">Profissão</label>
+                            <input type="text" name="profissao" class="form-control" id="profissao"
+                                placeholder="Pintor, pedreiro, faxineira, costureira..">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm">
+                        <label for="textareaProfissional">A história desse profissional</label>
+                        <textarea class="form-control" name="textareaProfissional" id="textareaProfissional" cols="16"
+                            rows="8"
+                            placeholder="Conte um pouco sobre a história desse profissional, com o que trabalhou, porque e como conheceu a ONG, o que mudou na vida depois que entrou na ONG, etc.."></textarea>
+                    </div>
+                    <div class="form-check">
+                        <button type="submit" class="btn btn-warning btn-lg">Enviar</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer (IDEM HOME)-->
+    <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+        <div>
+            <p class="text-black py-1 my-0">SolidarieVAGAS</p>
+            <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>
+        </div>
+        <div class="my-1 py-1">
+            <a href="" title="Facebook">
+                <i class="fab fa-facebook-square mx-1"></i>
+            </a>
+            <a href="" title="Twitter" target="_blank">
+                <i class="fab fa-twitter-square mx-1"></i>
+            </a>
+            <a href="" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin mx-1"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

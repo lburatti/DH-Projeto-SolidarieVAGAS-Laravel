@@ -1,6 +1,114 @@
-header, main, footer {
-    border: 1px solid #DCDCDC;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+header .navbar {
+    background-color: #F8F8FF;
+    height: 80px;
+}
+header .login{
+    color: white;
+}
+article.carousel-um {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d4c1a1;
+    background-image: url(../img/frase1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    text-align: center;
+}
+article.carousel-dois {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d4c1a1;
+    background-image: url(../img/frase2.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    text-align: center;
+}
+article.carousel-tres {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d4c1a1;
+    background-image: url(../img/frase3.jpg);
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    text-align: center;
+}
+h1.vagas, h1.ongs, h1.parceiros {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+p.vagas, p.ongs, p.parceiros {
+    font-size: 18px;
+}
+section div.vagas {
+    background-color: #F0F8FF;
+}
+article.vagas h5 {
+    font-size: 18px;
+}
+article.vagas p {
+    font-size: 15px;
+}
+section .fa-angle-double-down {
+    color: black;
+    font-size: 36px;
+    padding: 15px 24px;
+    transition: all 0.8s ease-in-out;
+}
+section .fa-angle-double-down:hover {
+    color: gray;
+}
+section div.ongs {
+    background-color: #FFFAF0;
+}
+section div.parceiros {
+    background-color: #E0FFFF;
+}
+article.parceiros h5 {
+    font-size: 18px;
+}
+article.parceiros p {
+    font-size: 15px;
+}
+.obs{
+    color: red;
+    background-color: yellow;
 }
 footer {
     text-align: center;
+    background-color: #F8F8FF;
+    height: 150px;
+}
+footer .fab {
+    background-color: #fff;
+    color: gray;
+    font-size: 3em;
+    padding: 0px;
+}
+footer .fab:hover {
+    background-color: gray;
+    color: #fff;
+    transition: all 0.8s ease-in-out;
 }

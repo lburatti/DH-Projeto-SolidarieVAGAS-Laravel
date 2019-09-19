@@ -5,41 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vagas do Bem / SolidarieVAGAS</title>
+    <title>SolidarieVAGAS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- HEADER: Logo + menu (com itens à definir) -->
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#top">
-                <img src="img/logo.png" alt="Logo" height="100" width="100">
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo2.png" alt="Logo" height="100" width="100">
             </a>
             <!-- Itens do menu principal: -->
-            <ul class="navbar-nav ml-auto justify-content-end ">
-                <li class="nav-item">
-                    <a class="nav-link active " href="#">COMO PARTICIPAR</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">SOU UMA ONG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PARCEIROS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">LOGIN</a>
-                </li>
-            </ul>
+            <div class="d-flex flex-row ml-auto">
+                <div class="dropdown mx-1">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Quero participar!
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">
+                            <a href="busca.html">Busque um profissional</a>
+                        </button>
+                        <button class="dropdown-item" type="button">
+                            <a href="cadastro.html">Cadastre sua ONG</a>
+                        </button>
+                        <button class="dropdown-item" type="button">
+                            <a href="parceiros.html">Seja parceiro, cadastre-se!</a>
+                        </button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    <a href="login.html" class="login">Login</a>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main class="container-fluid">
 
         <!-- SECTION 1: slides com imagem e texto que ficam girando - CAROUSEL - (por enquanto deixei 3) -->
-        <section id="slides" class="container">
+        <section id="slides" class="container my-2">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -47,14 +58,26 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active" id="carouselUm">
-                        <img src="img/1.jpg" class="d-block w-100" height="600px" alt="Imagem 1">
+                    <div class="carousel-item active">
+                        <article class="carousel-um">
+                            <p>Frase de impacto 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
+                                FUNDO)</p>
+                            <a href="#busca" class="btn btn-secondary">Ver mais</a>
+                        </article>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/2.jpg" class="d-block w-100" height="600px" alt="Imagem 2">
+                        <article class="carousel-dois">
+                            <p>Frase de impacto 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
+                                FUNDO)</p>
+                            <a href="#busca" class="btn btn-secondary">Ver mais</a>
+                        </article>
                     </div>
                     <div class="carousel-item">
-                        <img src="img/3.jpg" class="d-block w-100" height="600px" alt="Imagem 3">
+                        <article class="carousel-tres">
+                            <p>Frase de impacto 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
+                                FUNDO)</p>
+                            <a href="#busca" class="btn btn-secondary">Ver mais</a>
+                        </article>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -66,148 +89,187 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </section>
+        <!-- setinhas para proximo item da pagina -->
+        <section class="container d-flex justify-content-center py-2 my-1">
             <a href="#mensagemVagas">
-                <!-- AQUI PRETENDO COLOCAR AQUELE BOTÃO PRA DESCER A PAGINA, PRO PRÓXIMO ITEM (mensagemVagas) -->
                 <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 2: VAGAS - explicação, busca, lista de profissionais -->
         <section id="mensagemVagas" class="container">
-            <div class="jumbotron my-2">
-                <h1 class="display-4">Vagas do Bem - Participe!</h1>
-                <p class="lead">Texto explicando como funciona para você contribuir com essa ação para ajudar muitas
-                    pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
+            <div class="jumbotron my-2 py-5 vagas">
+                <h1 class="display-4 text-center pb-2 alert alert-info vagas">SolidarieVAGAS</h1>
+                <p class="lead text-justify vagas">Texto explicando como funciona para você contribuir com essa ação
+                    para ajudar muitas pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit,
+                    amet consectetur
                     adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
                     modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
                 <hr class="my-4">
-                <p>Encontre um profissional para realizar o serviço que você precisa:
-                </p>
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile04"
-                            aria-describedby="inputGroupFileAddon04">
-                        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                    </div>
+                <p class="lead text-center alert alert-info vagas">Encontre um profissional para realizar o serviço que
+                    você precisa:</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button"
-                            id="inputGroupFileAddon04">Button</button>
+                        <button class="btn btn-info" type="button" id="button-addon2">
+                            <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
                     </div>
                 </div>
                 <hr class="my-4">
-                <p>Veja alguns grupos de profissionais disponíveis:</p>
-                <article class="row container">
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
+                <p class="lead text-center alert alert-info vagas">Veja alguns grupos de profissionais disponíveis:</p>
+                <article class="row vagas">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Grupo de serviços 1</h5>
                             <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="#" class="btn btn-primary">Veja mais</a>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Grupo de serviços 2</h5>
                             <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="#" class="btn btn-primary">Veja mais</a>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Grupo de serviços 3</h5>
                             <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="#" class="btn btn-primary">Veja mais</a>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center ">
                             <h5 class="card-title">Grupo de serviços 4</h5>
                             <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="#" class="btn btn-primary">Veja mais</a>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
                             <h5 class="card-title">Grupo de serviços 5</h5>
                             <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="#" class="btn btn-primary">Veja mais</a>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Grupo de serviços 6</h5>
+                            <p class="card-text">Informações, serviços deste grupo.</p>
+                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
                         </div>
                     </div>
                 </article>
             </div>
             </a>
+        </section>
+        <!-- setinhas para proximo item da pagina -->
+        <section class="container d-flex justify-content-center py-2 my-1">
             <a href="#mensagemOngs">
-                <!-- AQUI PRETENDO COLOCAR AQUELE BOTÃO PRA DESCER A PAGINA, PRO PRÓXIMO ITEM (mensagemOngs) -->
                 <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 3: ONGs, com explicação, e opção para as ONGs se cadastrarem -->
         <section id="mensagemOngs" class="container">
-            <div class="jumbotron my-2">
-                <h1 class="display-4">ONG's - Cadastrem-se!</h1>
-                <p class="lead">Texto explicando como funciona para você contribuir com essa ação para ajudar muitas
+            <div class="jumbotron my-2 py-5 ongs">
+                <h1 class="display-4 text-center pb-4 alert alert-warning ongs">ONG's</h1>
+                <p class="lead text-justify ongs">Texto explicando como funciona para você contribuir com essa ação para
+                    ajudar muitas
                     pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
                     adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
                     modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
                 <hr class="my-4">
-                <p>Quer cadastrar as pessoas da sua ONG para prestarem serviços através do VAGAS DO BEM?
+                <p class="lead text-center alert alert-warning ongs">Quer cadastrar as pessoas da sua ONG para prestarem
+                    serviços através do VAGAS DO BEM?
                 </p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Cadastre sua ONG</a>
+                <a class="btn btn-warning btn-lg" href="cadastro.html" role="button">Cadastre sua ONG</a>
             </div>
+            </a>
+        </section>
+        <!-- setinhas para proximo item da pagina -->
+        <section class="container d-flex justify-content-center py-2 my-1">
+            <a href="#mensagemParceiros">
+                <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 4: PARCEIROS - área de parceiros, mostrando alguns dos nossos parceiros e com botão de "seja parceiro deste boa ação" -->
         <section id="mensagemParceiros" class="container">
-            <div class="jumbotron my-2">
-                <h1 class="display-4">Parceiros</h1>
-                <p class="lead">Texto explicando como funciona para você contribuir com essa ação para ajudar muitas
+            <div class="jumbotron my-2 py-5 parceiros">
+                <h1 class="display-4 text-center pb-4 alert alert-success parceiros">Parceiros</h1>
+                <p class="lead text-justify parceiros">Texto explicando como funciona para você contribuir com essa ação
+                    para
+                    ajudar muitas
                     pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
                     adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
                     modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
-                <article class="row container">
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Parceiro 1</h5>
+                <article class="row parceiros">
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title ">Parceiro 1</h5>
                             <p class="card-text">Informações</p>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Parceiro 1</h5>
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Parceiro 2</h5>
                             <p class="card-text">Informações</p>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Parceiro 1</h5>
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Parceiro 3</h5>
                             <p class="card-text">Informações</p>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Parceiro 1</h5>
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Parceiro 4</h5>
                             <p class="card-text">Informações</p>
                         </div>
                     </div>
-                    <div class="card my-2 ml-2 col-sm-2" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Parceiro 1</h5>
-                            <p class="card-text">Informações</p>    
+                    <div class="card my-2 m-2 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Parceiro 5</h5>
+                            <p class="card-text">Informações</p>
+                        </div>
+                    </div>
+                    <div class="card my-2 mx-1 col-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Parceiro 6</h5>
+                            <p class="card-text">Informações</p>
                         </div>
                     </div>
                 </article>
                 <hr class="my-4">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Quero ser um parceiro</a>
+                <p class="lead text-center alert alert-success parceiros">Se você quer contribuir para essa idéia, seja
+                    um parceiro:</p>
+                <a class="btn btn-success btn-lg" href="parceiros.html" role="button">Quero ser um parceiro</a>
             </div>
             </a>
         </section>
     </main>
 
-    <footer class="d-flex justify-content-center">
-        Vagas do Bem</br>
-        e-mail@e-mail.com.br</br>
-        LINKEDIN FACEBOOK OUTROS
+    <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+        <div>
+            <p class="text-black py-1 my-0">SolidarieVAGAS</p>
+            <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>
+        </div>
+        <div class="my-1 py-1">
+            <a href="" title="Facebook">
+                <i class="fab fa-facebook-square mx-1"></i>
+            </a>
+            <a href="" title="Twitter" target="_blank">
+                <i class="fab fa-twitter-square mx-1"></i>
+            </a>
+            <a href="" title="LinkedIn" target="_blank">
+                <i class="fab fa-linkedin mx-1"></i>
+            </a>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

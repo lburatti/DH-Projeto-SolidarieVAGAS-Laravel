@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SolidarieVAGAS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- HEADER - (IDEM HOME) -->
+  <header class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="home.html">
+        <img src="img/logo2.png" alt="Logo" height="100" width="100">
+      </a>
+      <!-- Itens do menu principal: -->
+      <div class="d-flex flex-row ml-auto">
+        <div class="dropdown mx-1">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Quero participar!
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">
+              <a href="busca.html">Busque um profissional</a>
+            </button>
+            <button class="dropdown-item" type="button">
+              <a href="cadastro.html">Cadastre sua ONG</a>
+            </button>
+            <button class="dropdown-item" type="button">
+              <a href="parceiros.html">Seja parceiro, cadastre-se!</a>
+            </button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary">
+          <a href="login.html" class="login">Login</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+
+    <!-- Section 1 - título e texto explicativo -->
+    <section class="container my-3 text-center">
+      <div class="jumbotron my-2 py-2 vagas">
+        <h1 class="display-4 text-center pb-2 alert alert-info vagas"><strong>Busque profissionais para realizar seu serviço!</strong></h1>
+        <p class="lead text-justify vagas">Texto falando sobre como buscar os profissionais que a pessoa precisa.. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Odit molestias magni pariatur facilis omnis consequatur quisquam laudantium necessitatibus quoeius, debitis rem ipsum quos, commodi, repellat saepe sapiente! Dignissimos, omnis!.</p>
+      </div>
+    </section>
+
+    <!-- Section 2 - Busca e resultados -->
+    <section class="container my-5 text-center">
+      <div class="input-group mb-3 py-2">
+        <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-info" type="button" id="button-addon2">
+            <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
+        </div>
+    </section>
+
+    <!-- Section 3 - RESULTADO DAS BUSCAS (não devem aparecer enquanto não houver uma busca, depois veremos como fazer-->
+    <section class="container my-2 text-center">
+      <p class="obs">*** abaixo virão as respostas das buscas, precisamos ajustar isso ainda..**</p>
+      <article class="row vagas d-flex">
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional1.jpg" class="card-img-top" alt="Profissional 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional2.jpg" class="card-img-top" alt="Profissional 2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional1.jpg" class="card-img-top" alt="Profissional 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional2.jpg" class="card-img-top" alt="Profissional 2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional1.jpg" class="card-img-top" alt="Profissional 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional2.jpg" class="card-img-top" alt="Profissional 2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional1.jpg" class="card-img-top" alt="Profissional 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+
+        <div class="card col-sm-3 mx-auto align-items-stretch">
+          <img src="img/profissional2.jpg" class="card-img-top" alt="Profissional 2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Nome do Profissional</h5>
+            <p class="card-text">Texto sobre o profissional. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-info btn-sm">Solicitar Serviço</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Footer (IDEM HOME)-->
+  <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+    <div>
+      <p class="text-black py-1 my-0">SolidarieVAGAS</p>
+      <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>
+    </div>
+    <div class="my-1 py-1">
+      <a href="" title="Facebook">
+        <i class="fab fa-facebook-square mx-1"></i>
+      </a>
+      <a href="" title="Twitter" target="_blank">
+        <i class="fab fa-twitter-square mx-1"></i>
+      </a>
+      <a href="" title="LinkedIn" target="_blank">
+        <i class="fab fa-linkedin mx-1"></i>
+      </a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
