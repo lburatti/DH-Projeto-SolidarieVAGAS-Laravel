@@ -17,10 +17,10 @@
 <body>
 
     <!-- HEADER: Logo + menu (com itens à definir) -->
-    <header class="container-fluid">
+    <header class="container-fluid p-0 m-0">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="home.html">
-                <img src="img/logo2.png" alt="Logo" height="100" width="100">
+            <a class="navbar-brand m-0 p-0" href="home.html">
+                <img src="img/logo2.png" alt="Logo" height="80" width="90">
             </a>
             <!-- Itens do menu principal: -->
             <div class="d-flex flex-row ml-auto">
@@ -48,21 +48,26 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-fluid m-0 p-0">
 
         <!-- Section 1 - título e texto explicativo -->
-        <section class="container my-3 text-center">
-            <div class="jumbotron my-2 py-2 ongs">
-                <h1 class="display-4 text-center pb-4 alert alert-warning ongs">Faça seu cadastro</h1>
-                <p class="lead text-justify ongs">Texto falando sobre as vantagens de se cadastrar e cadastrar os
-                    profissionais disponíveis na ONG. A importância de recolocar essas pessoas no mercado de trabalho,
-                    seja como CLT, freela, serviços temporários...</p>
-            </div>
+        <section class="container-fluid m-0 p-0" id="cadastro">
+            <article class="container text-center">
+                <div class="jumbotron m-0 py-4 ongs">
+                    <h1 class="display-4 text-center pb-4 alert alert-warning ongs">Faça seu cadastro</h1>
+                    <p class="lead text-justify ongs">Texto falando sobre as vantagens de se cadastrar e cadastrar os
+                        profissionais disponíveis na ONG. A importância de recolocar essas pessoas no mercado de
+                        trabalho,
+                        seja como CLT, freela, serviços temporários...</p>
+                </div>
+                <hr class="container-fluid m-0 p-0"><br>
+            </article>
         </section>
 
+
         <!-- Section 2 - formulário de cadastro -->
-        <section class="container my-3">
-            <article class="d-flex justify-content-center ">
+        <section class="container-fluid m-0 p-0" id="cadastro">
+            <article class="container d-flex justify-content-center ">
                 <form class="col-12">
                     <div class="form-group col-sm">
                         <label for="nomeOng">Nome da ONG</label>
@@ -147,7 +152,7 @@
                             rows="8"
                             placeholder="Conte um pouco sobre a história desse profissional, com o que trabalhou, porque e como conheceu a ONG, o que mudou na vida depois que entrou na ONG, etc.."></textarea>
                     </div>
-                    <div class="form-check">
+                    <div class="form-check mb-2">
                         <button type="submit" class="btn btn-warning btn-lg">Enviar</button>
                     </div>
                 </form>
@@ -156,7 +161,7 @@
     </main>
 
     <!-- Footer (IDEM HOME)-->
-    <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+    <footer class="container-fluid d-flex flex-column justify-content-center m-0 p-0">
         <div>
             <p class="text-black py-1 my-0">SolidarieVAGAS</p>
             <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>

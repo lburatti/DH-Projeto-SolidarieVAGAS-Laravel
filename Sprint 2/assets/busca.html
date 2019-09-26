@@ -15,11 +15,11 @@
 </head>
 
 <body>
-  <!-- HEADER - (IDEM HOME) -->
-  <header class="container-fluid">
+  <!-- HEADER: Logo + menu (com itens à definir) -->
+  <header class="container-fluid p-0 m-0">
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="home.html">
-        <img src="img/logo2.png" alt="Logo" height="100" width="100">
+      <a class="navbar-brand m-0 p-0" href="home.html">
+        <img src="img/logo2.png" alt="Logo" height="80" width="90">
       </a>
       <!-- Itens do menu principal: -->
       <div class="d-flex flex-row ml-auto">
@@ -47,32 +47,40 @@
     </nav>
   </header>
 
-  <main class="container-fluid">
+  <main class="container-fluid m-0 p-0">
 
     <!-- Section 1 - título e texto explicativo -->
-    <section class="container my-3 text-center">
-      <div class="jumbotron my-2 py-2 vagas">
-        <h1 class="display-4 text-center pb-2 alert alert-info vagas"><strong>Busque profissionais para realizar seu serviço!</strong></h1>
-        <p class="lead text-justify vagas">Texto falando sobre como buscar os profissionais que a pessoa precisa.. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Odit molestias magni pariatur facilis omnis consequatur quisquam laudantium necessitatibus quoeius, debitis rem ipsum quos, commodi, repellat saepe sapiente! Dignissimos, omnis!.</p>
-      </div>
+    <section class="container-fluid m-0 p-0" id="busca">
+      <article class="container text-center">
+        <div class="jumbotron m-0 py-4 vagas">
+          <h1 class="display-4 text-center pb-2 alert alert-info vagas"><strong>Busque profissionais para realizar seu
+              serviço!</strong></h1>
+          <p class="lead text-justify vagas">Texto falando sobre como buscar os profissionais que a pessoa precisa..
+            Lorem
+            ipsum dolor sit amet
+            consectetur adipisicing elit. Odit molestias magni pariatur facilis omnis consequatur quisquam laudantium
+            necessitatibus quoeius, debitis rem ipsum quos, commodi, repellat saepe sapiente! Dignissimos, omnis!.</p>
+        </div>
+      </article>
     </section>
 
-    <!-- Section 2 - Busca e resultados -->
-    <section class="container my-5 text-center">
-      <div class="input-group mb-3 py-2">
-        <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
-          aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-info" type="button" id="button-addon2">
-            <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
-        </div>
+    <!-- Section 2 - Busca -->
+    <section class="container-fluid m-0 p-0" id="busca">
+      <article class="container text-center py-4">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-info" type="button" id="button-addon2">
+              <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
+          </div>
+      </article>
     </section>
 
     <!-- Section 3 - RESULTADO DAS BUSCAS (não devem aparecer enquanto não houver uma busca, depois veremos como fazer-->
-    <section class="container my-2 text-center">
+    <section class="container-fluid my-2 mx-0 p-0 text-center" id="resultadoBusca">
       <p class="obs">*** abaixo virão as respostas das buscas, precisamos ajustar isso ainda..**</p>
-      <article class="row vagas d-flex">
+      <article class="row vagas d-flex justify-content-center">
         <div class="card col-sm-3 mx-auto align-items-stretch">
           <img src="img/profissional1.jpg" class="card-img-top" alt="Profissional 1">
           <div class="card-body">
@@ -158,7 +166,7 @@
   </main>
 
   <!-- Footer (IDEM HOME)-->
-  <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+  <footer class="container-fluid d-flex flex-column justify-content-center m-0 p-0">
     <div>
       <p class="text-black py-1 my-0">SolidarieVAGAS</p>
       <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>

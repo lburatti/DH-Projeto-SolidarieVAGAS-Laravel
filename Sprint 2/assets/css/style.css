@@ -6,11 +6,27 @@
     font-family: sans-serif;
 }
 header .navbar {
-    background-color: #F8F8FF;
+    background-color:#808080;
     height: 80px;
 }
 header .login{
-    color: white;
+    color: #808080;
+}
+header .btn-secondary{
+    background-color: white;
+    color: #808080;
+}
+main section#slides, .double-down-carousel {
+    background-color: #FAF0E6;
+}
+main section#busca {
+    background-color: #B0C4DE;
+}
+main section#cadastro {
+    background-color: #FAF0E6;
+}
+main section#login {
+    background-color: #B0C4DE;
 }
 article.carousel-um {
     height: 70vh;
@@ -54,16 +70,19 @@ article.carousel-tres {
     font-size: 30px;
     text-align: center;
 }
-h1.vagas, h1.ongs, h1.parceiros {
+h1.vagas, h1.ongs, h1.parceiros, h1.login {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
-p.vagas, p.ongs, p.parceiros {
+p.vagas, p.ongs, p.parceiros, p.login {
     font-size: 18px;
 }
 section div.vagas {
-    background-color: #F0F8FF;
+    background-color: #B0C4DE;
+}
+#mensagemVagas, .double-down-vagas {
+    background-color: #B0C4DE;
 }
 article.vagas h5 {
     font-size: 18px;
@@ -81,10 +100,16 @@ section .fa-angle-double-down:hover {
     color: gray;
 }
 section div.ongs {
-    background-color: #FFFAF0;
+    background-color: #FAF0E6;
+}
+#mensagemOngs, .double-down-ongs {
+ background-color: #FAF0E6;
 }
 section div.parceiros {
-    background-color: #E0FFFF;
+    background-color: #B0C4DE;
+}
+#mensagemParceiros {
+    background-color: #B0C4DE;
 }
 article.parceiros h5 {
     font-size: 18px;
@@ -92,23 +117,29 @@ article.parceiros h5 {
 article.parceiros p {
     font-size: 15px;
 }
+section div.login {
+    background-color: #B0C4DE;
+}
 .obs{
     color: red;
     background-color: yellow;
 }
+#resultadoBusca{
+    background-color: #FAF0E6;
+}
 footer {
     text-align: center;
-    background-color: #F8F8FF;
+    background-color: #808080;
     height: 150px;
 }
 footer .fab {
-    background-color: #fff;
-    color: gray;
+    background-color: #808080;
+    color: white;
     font-size: 3em;
     padding: 0px;
 }
 footer .fab:hover {
-    background-color: gray;
-    color: #fff;
+    background-color: #808080;
+    color: #F5DEB3;
     transition: all 0.8s ease-in-out;
 }

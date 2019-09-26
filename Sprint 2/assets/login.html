@@ -16,10 +16,10 @@
 
 <body>
   <!-- HEADER: Logo + menu (com itens à definir) -->
-  <header class="container-fluid">
+  <header class="container-fluid p-0 m-0">
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="home.html">
-        <img src="img/logo2.png" alt="Logo" height="100" width="100">
+      <a class="navbar-brand m-0 p-0" href="home.html">
+        <img src="img/logo2.png" alt="Logo" height="80" width="90">
       </a>
       <!-- Itens do menu principal: -->
       <div class="d-flex flex-row ml-auto">
@@ -47,30 +47,34 @@
     </nav>
   </header>
 
-  <main class="container-fluid">
-    <section class="container">
-      <div class="jumbotron my-2 py-2">
-        <h1 class="display-4 text-center py-4 ongs">Login</h1>
-        <p class="lead text-center ongs">Para acessar seu cadastro e fazer alterações, inclusão de novos profissionais, ou exclusão de alguma informação, entre com seus dados abaixo:</p>
-      </div>
-      <form class="col-12">
-        <div class="form-row col-sm">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Senha </label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Digite uma senha ">
-          </div>
+  <main class="container-fluid m-0 p-0">
+    <section class="container-fluid m-0 p-0" id="login">
+      <article class="container">
+        <div class="jumbotron m-0 py-4 login">
+          <h1 class="display-4 text-center py-4 login">Login</h1>
+          <p class="lead text-center login">Para acessar seu cadastro e fazer alterações, inclusão de novos
+            profissionais,
+            ou exclusão de alguma informação, entre com seus dados abaixo:</p>
         </div>
-        <button type="submit" class="btn btn-secondary">Entrar</button>
-      </form>
+        <form class="col-12">
+          <div class="form-row col-sm login">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Senha </label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Digite uma senha ">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-secondary mb-4">Entrar</button>
+        </form>
+      </article>
     </section>
   </main>
 
   <!-- Footer (IDEM HOME)-->
-  <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+  <footer class="container-fluid d-flex flex-column justify-content-center m-0 p-0">
     <div>
       <p class="text-black py-1 my-0">SolidarieVAGAS</p>
       <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>

@@ -14,12 +14,12 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="container-fluid p-0 m-0">
     <!-- HEADER: Logo + menu (com itens à definir) -->
-    <header class="container-fluid">
+    <header class="container-fluid p-0 m-0">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="home.html">
-                <img src="img/logo2.png" alt="Logo" height="100" width="100">
+            <a class="navbar-brand m-0 p-0" href="home.html">
+                <img src="img/logo2.png" alt="Logo" height="80" width="90">
             </a>
             <!-- Itens do menu principal: -->
             <div class="d-flex flex-row ml-auto">
@@ -47,11 +47,11 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-fluid m-0 p-0">
 
         <!-- SECTION 1: slides com imagem e texto que ficam girando - CAROUSEL - (por enquanto deixei 3) -->
-        <section id="slides" class="container my-2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <section id="slides" class="container-fluid m-0 p-0">
+            <div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -59,21 +59,21 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <article class="carousel-um">
+                        <article class="carousel-um rounded my-2">
                             <p>Frase de impacto 1 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
                                 FUNDO)</p>
                             <a href="#busca" class="btn btn-secondary">Ver mais</a>
                         </article>
                     </div>
                     <div class="carousel-item">
-                        <article class="carousel-dois">
+                        <article class="carousel-dois rounded my-2">
                             <p>Frase de impacto 2 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
                                 FUNDO)</p>
                             <a href="#busca" class="btn btn-secondary">Ver mais</a>
                         </article>
                     </div>
                     <div class="carousel-item">
-                        <article class="carousel-tres">
+                        <article class="carousel-tres rounded my-2">
                             <p>Frase de impacto 3 - Lorem ipsum dolor sit amet consectetur adipisicing elit? (IMAGEM NO
                                 FUNDO)</p>
                             <a href="#busca" class="btn btn-secondary">Ver mais</a>
@@ -91,170 +91,182 @@
             </div>
         </section>
         <!-- setinhas para proximo item da pagina -->
-        <section class="container d-flex justify-content-center py-2 my-1">
+        <section class="container-fluid d-flex justify-content-center double-down-carousel">
             <a href="#mensagemVagas">
                 <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 2: VAGAS - explicação, busca, lista de profissionais -->
-        <section id="mensagemVagas" class="container">
-            <div class="jumbotron my-2 py-5 vagas">
-                <h1 class="display-4 text-center pb-2 alert alert-info vagas">SolidarieVAGAS</h1>
-                <p class="lead text-justify vagas">Texto explicando como funciona para você contribuir com essa ação
-                    para ajudar muitas pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit,
-                    amet consectetur
-                    adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
-                    modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
-                <hr class="my-4">
-                <p class="lead text-center alert alert-info vagas">Encontre um profissional para realizar o serviço que
-                    você precisa:</p>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
-                        aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-info" type="button" id="button-addon2">
-                            <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
+        <section id="mensagemVagas" class="container-fluid m-0 p-0">
+            <article class="container py-2">
+                <div class="jumbotron vagas py-4 my-0">
+                    <h1 class="display-4 text-center pb-2 alert alert-info vagas">SolidarieVAGAS</h1>
+                    <p class="lead text-justify vagas">Texto explicando como funciona para você contribuir com essa ação
+                        para ajudar muitas pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor
+                        sit,
+                        amet consectetur
+                        adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos
+                        fugit
+                        modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
+                    <hr class="my-4">
+                    <p class="lead text-center alert alert-info vagas">Encontre um profissional para realizar o serviço
+                        que
+                        você precisa:</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Escreva aqui o que você está procurando..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-info" type="button" id="button-addon2">
+                                <a href="busca.html" class="btn btn-info btn-sm">Buscar</a></button>
+                        </div>
                     </div>
+                    <hr class="my-4">
+                    <p class="lead text-center alert alert-info vagas">Veja alguns grupos de profissionais disponíveis:
+                    </p>
+                    <article class="row vagas">
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grupo de serviços 1</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grupo de serviços 2</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grupo de serviços 3</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center ">
+                                <h5 class="card-title">Grupo de serviços 4</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grupo de serviços 5</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Grupo de serviços 6</h5>
+                                <p class="card-text">Informações, serviços deste grupo.</p>
+                                <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <hr class="my-4">
-                <p class="lead text-center alert alert-info vagas">Veja alguns grupos de profissionais disponíveis:</p>
-                <article class="row vagas">
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Grupo de serviços 1</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Grupo de serviços 2</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Grupo de serviços 3</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center ">
-                            <h5 class="card-title">Grupo de serviços 4</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Grupo de serviços 5</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Grupo de serviços 6</h5>
-                            <p class="card-text">Informações, serviços deste grupo.</p>
-                            <a href="busca.html" class="btn btn-info btn-sm">Veja mais</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            </a>
+                </a>
+            </article>
         </section>
         <!-- setinhas para proximo item da pagina -->
-        <section class="container d-flex justify-content-center py-2 my-1">
+        <section class="container-fluid d-flex justify-content-center double-down-vagas">
             <a href="#mensagemOngs">
                 <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 3: ONGs, com explicação, e opção para as ONGs se cadastrarem -->
-        <section id="mensagemOngs" class="container">
-            <div class="jumbotron my-2 py-5 ongs">
-                <h1 class="display-4 text-center pb-4 alert alert-warning ongs">ONG's</h1>
-                <p class="lead text-justify ongs">Texto explicando como funciona para você contribuir com essa ação para
-                    ajudar muitas
-                    pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
-                    modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
-                <hr class="my-4">
-                <p class="lead text-center alert alert-warning ongs">Quer cadastrar as pessoas da sua ONG para prestarem
-                    serviços através do VAGAS DO BEM?
-                </p>
-                <a class="btn btn-warning btn-lg" href="cadastro.html" role="button">Cadastre sua ONG</a>
-            </div>
-            </a>
+        <section id="mensagemOngs" class="container-fluid p-0 m-0">
+            <article class="container py-2">
+                <div class="jumbotron py-4 my-0 ongs">
+                    <h1 class="display-4 text-center pb-4 alert alert-warning ongs">ONG's</h1>
+                    <p class="lead text-justify ongs">Texto explicando como funciona para você contribuir com essa ação
+                        para
+                        ajudar muitas
+                        pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos
+                        fugit
+                        modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
+                    <hr class="my-4">
+                    <p class="lead text-center alert alert-warning ongs">Quer cadastrar as pessoas da sua ONG para
+                        prestarem
+                        serviços através do VAGAS DO BEM?
+                    </p>
+                    <a class="btn btn-warning btn-lg" href="cadastro.html" role="button">Cadastre sua ONG</a>
+                </div>
+                </a>
+            </article>
         </section>
         <!-- setinhas para proximo item da pagina -->
-        <section class="container d-flex justify-content-center py-2 my-1">
+        <section class="container-fluid d-flex justify-content-center double-down-ongs">
             <a href="#mensagemParceiros">
                 <i class="fa fa-angle-double-down"></i>
             </a>
         </section>
 
         <!-- SECTION 4: PARCEIROS - área de parceiros, mostrando alguns dos nossos parceiros e com botão de "seja parceiro deste boa ação" -->
-        <section id="mensagemParceiros" class="container">
-            <div class="jumbotron my-2 py-5 parceiros">
-                <h1 class="display-4 text-center pb-4 alert alert-success parceiros">Parceiros</h1>
-                <p class="lead text-justify parceiros">Texto explicando como funciona para você contribuir com essa ação
-                    para
-                    ajudar muitas
-                    pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos fugit
-                    modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
-                <article class="row parceiros">
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title ">Parceiro 1</h5>
-                            <p class="card-text">Informações</p>
+        <section id="mensagemParceiros" class="container-fluid p-0 m-0">
+            <article class="container py-2">
+                <div class="jumbotron py-4 my-0 parceiros">
+                    <h1 class="display-4 text-center pb-4 alert alert-success parceiros">Parceiros</h1>
+                    <p class="lead text-justify parceiros">Texto explicando como funciona para você contribuir com essa
+                        ação para ajudar muitas pessoas que querem estar no mercado de trabalho ...</br>Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Id nobis, officia facere nulla ex impedit dolore dignissimos, distinctio eos
+                        fugit modi praesentium provident hic ea eum voluptate, placeat eaque doloribus!</p>
+                    <article class="row parceiros">
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title ">Parceiro 1</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Parceiro 2</h5>
-                            <p class="card-text">Informações</p>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Parceiro 2</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Parceiro 3</h5>
-                            <p class="card-text">Informações</p>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Parceiro 3</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Parceiro 4</h5>
-                            <p class="card-text">Informações</p>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Parceiro 4</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-2 m-2 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Parceiro 5</h5>
-                            <p class="card-text">Informações</p>
+                        <div class="card my-2 m-2 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Parceiro 5</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-2 mx-1 col-sm">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Parceiro 6</h5>
-                            <p class="card-text">Informações</p>
+                        <div class="card my-2 mx-1 col-sm">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Parceiro 6</h5>
+                                <p class="card-text">Informações</p>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <hr class="my-4">
-                <p class="lead text-center alert alert-success parceiros">Se você quer contribuir para essa idéia, seja
-                    um parceiro:</p>
-                <a class="btn btn-success btn-lg" href="parceiros.html" role="button">Quero ser um parceiro</a>
-            </div>
-            </a>
+                    </article>
+                    <hr class="my-4">
+                    <p class="lead text-center alert alert-success parceiros">Se você quer contribuir para essa idéia,
+                        seja
+                        um parceiro:</p>
+                    <a class="btn btn-success btn-lg" href="parceiros.html" role="button">Quero ser um parceiro</a>
+                </div>
+                </a>
+            </article>
         </section>
     </main>
 
-    <footer class="container d-flex flex-column justify-content-center my-1 py-0">
+    <footer class="container-fluid d-flex flex-column justify-content-center m-0 p-0">
         <div>
             <p class="text-black py-1 my-0">SolidarieVAGAS</p>
             <p class="text-black py-1 my-0">e-mail@e-mail.com.br</p>
