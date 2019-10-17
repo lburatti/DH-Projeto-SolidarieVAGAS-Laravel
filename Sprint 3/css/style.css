@@ -3,486 +3,781 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-style: normal;
     scroll-behavior: smooth;
-    font-family: bebas-neue-by-fontfabric, arial-regular;
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     border: none;
     outline: none;
     text-transform: none;
-    font-variant: small-caps;
+    font-variant: normal;
     font-stretch: expanded;
 }
 
-/* HEADER */
-header .navbar {
-    background-color:white;
-    height: 80px;
-    font-size: 1.8em;
-    position: fixed;
-}
+@media screen and (min-width: 768px) {
+    /* HEADER */
+    header .navbar {
+        background-color:white;
+        height: 80px;
+        font-size: 20px;
+        position: fixed;
+    }
+    header nav a.navbar-brand {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 25px;
+    }
+    header button i.fas {
+        border: 2px solid #FF6347;
+        background-color: white;
+        padding: .25rem .75rem;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 5px;
+    }
+    header button i.fa-bars {
+        color: #FF6347;
+        background-color: white;
+    }
+    header .btn-light{
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+        font-size: 20px;
+    }
+    header .btn-light:hover, header .btn-light:active, header .btn-light:focus {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    header ul li:hover a, header ul li:active a, header ul li:focus a {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+
+    /* HIGOR - modals */
+    /* cor do titulo  */
+    #login {
+        color:  #FF6347;
+    }
+    /* cor do texto  */
+    #texto-login-cadastro{
+        color: black;
+        font-size: 18px;
+    }
+    /* Margin do input */
+    .login-cadastro-input {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        font-size: 18px;
+    }
+    input.login-cadastro-input:focus {
+        background-color: rgb(207, 205, 205);
+    }
+    /* cor do botão */
+    .opcoes-cadastros {
+        margin-top: 110px;
+        font-size: 18px;
+    }
+    #botao-login {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        color: white;
+        font-size: 18px;
+    }
+    #botao-login:hover, #botao-login:active, #botao-login:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* fim modal */
+    section div.cadastros {
+        border: 0px solid white;
+        border-radius: 2px;
+    }
+    .img-form{
+        width: 200px;
+    }
+    section.logo-cadastros {
+        position: relative;
+        margin-bottom: 200px;
+    }
+    .formulario{
+        align-items: center;
+        margin : auto;
+        border: 0px solid white;
+        border-radius: 2px;
+        font-size: 18px;
+    } 
+    section div.login {
+        background-color: white;
+    }
 
 
-/* HIGOR - modals */
-/* cor do titulo  */
-#Login {
-    color:  #FF6347;
-}
-/* cor do texto  */
-#texto-login-cadastro{
-    color: #691c65;
-}
-/* Margin do input */
-.login-casastro-input {
-    border: 2px solid #FF6347;
-}
-/* cor do botão */
-.opcoes-cadastros {
-    margin-top: 110px;
-}
-#botao-login {
-    color:#fff;
-    background-color: #FF6347;
-}
-/* fim modal */
-section div.cadastros {
-    border: 0px solid white;
-}
-#cadastro {
-    color: #691c65;
-}
-.img-form{
-    width: 200px;
-}
-section.logo-cadastros {
-    position: relative;
-    margin-bottom: 200px;
-}
-.Formulario{
-    align-items: center;
-    margin : auto;
-    border: 0px solid white;
-} 
-header .login{
-    color: #FF6347;
-}
-header .btn-secondary{
-    background-color: white;
-    color: #FF6347;
-    border: 2px solid #FF6347;
-}
-section div.login {
-    background-color: white;
-}
-
-
-/* MAIN HOME - BANNER */
-section#homeBanner, .double-down-banner {
-    background-color: white;
-}
-section#homeBanner div .img-fluid {
-    height: auto;
-    width: 100%;
-    background-size: cover;
-    opacity: 0.7;
-}
-section#homeBanner p.texto-banner-um {
-    position: relative;
-    margin: 35% auto;
-    font-size: 3.5em;
-    color: black;
-}
-section#homeBanner p.texto-banner-um span {
-    font-size: 2.5em;
-    color: #FF6347;
-    font-weight: bold;
-}
-section#homeBanner p.texto-banner-dois {
-    position: relative;
-    margin: 40% auto;
-    color: black;
-    font-size: 5.5em;
-}
-section#homeBanner li.icons-banner{
-    background-color: #FF6347;
-}
-section#homeBanner .carousel-fade{
-    transition: transform 2s ease opacity .3s ease-out;
-}
-
-
-/* MAIN HOME - SOLIDARIEVAGAS */
-section#homeSolidarieVagas div.card-frase {
-    align-content: center;
-}
-section#homeSolidarieVagas h1.vagas{
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    color: #FF6347;
-}
-section#homeSolidarieVagas p.vagas, section#busca p.vagas{
-    font-size: 2.5em;
-    color: black;
-    font-weight: bold;
-}
-section#homeSolidarieVagas div.card-body p{
-    font-size: 1.7em;
-    color: black;
-}
-section#homeSolidarieVagas img.card-img-top {
-    background-color: white;
-    width: 100px;
-    height: 100px;
-}
-section#homeSolidarieVagas, .double-down {
-    background-color: white;
-}
-section .fa-angle-double-down {
-    color: #FF6347;
-    font-size: 36px;
-    padding: 15px 24px;
-    transition: all 0.8s ease-in-out;
-}
-section .fa-angle-double-down:hover {
-    color: rgb(184, 56, 33);
-}
-section#homeSolidarieVagas .grupos-servicos {
-    border: 2px solid #FF6347;
-    border-radius: 50px;
-}
-section#homeSolidarieVagas h5.card-vagas {
-    font-size: 1.7em;
-    font-weight: bold;
-}
-section#homeSolidarieVagas p.card-vagas {
-    font-size: 1.5em;
-}
-section#homeSolidarieVagas input.busca, section#busca input.busca{
-    border: 2px solid #FF6347;
-    height: 60px;
-    font-size: 1.5em;
-}
-section#homeSolidarieVagas button.busca, section#busca button.busca {
-    border: 2px solid #FF6347;
-    background-color: #FF6347;
-    height: 60px;
-}
-section#homeSolidarieVagas a.busca, section#busca a.busca {
-    color: white;
-    font-size: 1.5em;
-}
-section#homeSolidarieVagas button.busca:hover, section#busca button.busca:hover {
-    background-color: rgb(184, 56, 33);
-    transition: all 0.8s ease-in-out;
-}
-section#homeSolidarieVagas button.veja-mais {
-    border: 2px solid #FF6347;
-    background-color: #FF6347;
-    height: 60px;
-    width: 300px;
-}
-section#homeSolidarieVagas a.veja-mais {
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-}
-section#homeSolidarieVagas button.veja-mais:hover {
-    background-color: rgb(184, 56, 33);
-    transition: all 0.8s ease-in-out;
-}
-
-/* MAIN HOME - ONGS */
-section#homeOngs {
-    width: 100%;
-    height: auto;
-}
-section#homeOngs div.ongs {
-    background-color: white;
-}
-section#homeOngs h1.ongs{
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    color: #FF6347;
-}
-section#homeOngs p.ongs{
-    font-size: 1.7em;
-}
-section#homeOngs article div {
-    background-image: url(../editavel/logo.png);
-    background-color: white;
-    height: 450px;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: -300px;
-}
-section#homeOngs article div p.ongs {
-    position: relative;
-    width: 500px;
-    height: 100vh;
-}
-section#homeOngs article div a.ongs {
-    position: relative;
-}
-section#homeOngs a.ongs {
-    border: 2px solid #FF6347;
-    background-color: #FF6347;
-    height: 50px;
-    width: 200px;
-    color: white;
-    font-size: 0.9em;
-    text-align: center;
-}
-section#homeOngs a.ongs:hover {
-    background-color: rgb(184, 56, 33);
-    transition: all 0.8s ease-in-out;
-}
-section#homeOngs, .double-down-ongs {
-    background-color: white;
-}
-
-/* MAIN HOME - PARCEIROS */
-section#homeParceiros div.parceiros {
-    background-color: white;
-}
-section#homeParceiros h1.parceiros{
-    text-align: center;
-    font-size: 4em;
-    font-weight: bold;
-    color: #FF6347;
-}
-section#homeParceiros p.parceiros{
-    font-size: 1.7em;
-}
-section#homeParceiros .card-parceiros img.nubank, img.airbnb, img.extra, img.cobasi{
-    border: 0.5px solid #FF6347;
-    width: 250px;
-    height: 140px;
-}
-section#homeParceiros .card-parceiros img.mcDonalds, img.adidas, img.carrefour, img.kalunga{
-    border: 0.5px solid #FF6347;
-    width: 225px;
-    height: 225px;
-}
-section#homeParceiros a.parceiros {
-    border: 2px solid #FF6347;
-    background-color: #FF6347;
-    height: 50px;
-    width: 250px;
-}
-section#homeParceiros a.parceiros {
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-}
-section#homeParceiros a.parceiros:hover {
-    background-color: rgb(184, 56, 33);
-    transition: all 0.8s ease-in-out;
-}
-
-
-/* footer style */
-footer {
-    background-color: #FF6347;
-    color: #fff;
-    padding: 42px 0 66px;
-}
-/* 
-footer ._cont {
-    position: relative;
-} */
-
-footer .left {
-    float: left;
-    width: 50%;
-}
-
-/* posiçao caixa receber email */
-footer .right {
-    float: right;
-    text-align: right;
-    width: 50%;
-    padding-right: 10%;
-}
-/* tamanho das fontes */
-footer .top .left {
-    font-size: 2em;
-    line-height: 188.88889%;
-    padding-top: 8px;
-}
-/* posiçao email e fone  */
-footer .top .left .phone {
-    background: transparent no-repeat left 9px;
-    display: inline-block;
-    margin-right: 75px;
-    padding-left: 10%;
-}
-
-footer .top .left a.mail {
-    display: inline-block;
-    padding-left: 28px;
-    position: relative;
-}
-
-/* footer .top .left a.mail:before {
-    background: transparent no-repeat left top;
-    content: "";
-    height: 16px;
-    left: 0;
-    position: absolute;
-    top: 10px;
-    width: 20px;
-} */
-
-/* footer .top .left a.mail:hover {
-    color:#fff;
-} */
-
-/* caixa de email */
-footer .top form {
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    border: 1px solid #fff;
-    display: inline-block;
-}
-
-footer .top form input {
-    font-family: "montserratlight", sans-serif;
-    font-size: 1em;
-    line-height: 121.42857%;
-    background-color: transparent;
-    border: 0 none;
-    color: #fff;
-    padding: 15px 12px;
-    width: 320px;
-}
-
-footer .top form input:-moz-placeholder {
-    color: #fff;
-    opacity: 1;
-}
-
-
-footer .top form button {
-    font-family: "montserratbold", sans-serif;
-    font-size: 1em;
-    line-height: 121.42857%;
-    background-color: transparent;
-    border: 0 none;
-    color: #fff;
-    margin-right: 4px;
-}
-
-footer .top form button:hover {
-    color: #fff;
-}
-
-footer .bottom {
-    font-size: 1em;
-    line-height: 128.57143%;
-    padding-top: 101px;
-}
-
-footer .bottom .left nav li {
-    float: left;
-    list-style-type: none;
-}
-
-footer .bottom .left nav li a {
-    display: inline-block;
-}
-
-footer .bottom .left a {
-    display: inline-block;
-    opacity: 0.64;
-    text-decoration: underline;
-}
-
-footer .bottom .left a:hover {
-    opacity: 1;
-}
-
-footer .bottom .left li {
-    margin-right: 32px;
-}
-
-footer .bottom .left li:last-child {
-    margin-right: 0;
-}
-
-footer .socials {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 600px;
-}
-.socials {
-    color: #fff;
-}
-
-.socials strong {
-    opacity: 2.4;
-}
-
-.socials ul {
-    display: inline-block;
-}
-
-.socials li {
-    float: left;
-    margin-left: 28px;
-    list-style-type: none;
-}
-
-.socials a {
-    background: transparent no-repeat left top;
-    display: inline-block;
-    opacity: 0.65;
-    overflow: hidden;
-    position: relative;
-    text-indent: 100px;
-    top: 12px;
-}
-
-.socials a:hover {
-    opacity: 1;
-}
-
-.socials .tw {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDE2IDE0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDQ1LjAwMDAwMCwgLTE1OTEuMDAwMDAwKSIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjAwMDAwMCwgMTI0Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAxNDYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0MC4wMDAwMDAsIDE5MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTguMjIyNTA4OSw5Ljc1MDk3NjAxIEMxNi44MjU1Njg5LDEwLjI1OTQxNzMgMTUuOTQyNzAyOSwxMS41NzAwNjYgMTYuMDQzMjgyNiwxMy4wMDUwMDA0IEwxNi4wNzY4MDkxLDEzLjU1ODYzNjUgTDE1LjUxODAzMzEsMTMuNDkwODQ0MyBDMTMuNDg0MDg4NSwxMy4yMzA5NzQzIDExLjcwNzE4MDksMTIuMzQ5Njc2MSAxMC4xOTg0ODU4LDEwLjg2OTU0NjkgTDkuNDYwOTAxNDcsMTAuMTM1MTMxNyBMOS4yNzA5MTc2MywxMC42Nzc0NjkxIEM4Ljg2ODU5ODkyLDExLjg4NjQyOTUgOS4xMjU2MzU4OCwxMy4xNjMxODIyIDkuOTYzNzk5ODUsMTQuMDIxODgzIEMxMC40MTA4MjA2LDE0LjQ5NjQyODMgMTAuMzEwMjQxLDE0LjU2NDIyMDQgOS41MzkxMzAxLDE0LjI4MTc1MyBDOS4yNzA5MTc2MywxNC4xOTEzNjM1IDkuMDM2MjMxNzIsMTQuMTIzNTcxMyA5LjAxMzg4MDY4LDE0LjE1NzQ2NzQgQzguOTM1NjUyMDQsMTQuMjM2NTU4MyA5LjIwMzg2NDUxLDE1LjI2NDczOTYgOS40MTYxOTkzOSwxNS42NzE0OTI2IEM5LjcwNjc2MjksMTYuMjM2NDI3NCAxMC4yOTkwNjU0LDE2Ljc5MDA2MzUgMTAuOTQ3MjQ1NiwxNy4xMTc3MjU3IEwxMS40OTQ4NDYsMTcuMzc3NTk1NyBMMTAuODQ2NjY1OSwxNy4zODg4OTQ0IEMxMC4yMjA4MzY4LDE3LjM4ODg5NDQgMTAuMTk4NDg1OCwxNy40MDAxOTMxIDEwLjI2NTUzODksMTcuNjM3NDY1NyBDMTAuNDg5MDQ5MywxOC4zNzE4ODA5IDExLjM3MTkxNTMsMTkuMTUxNDkxIDEyLjM1NTM2MTEsMTkuNDkwNDUxOCBMMTMuMDQ4MjQzMywxOS43Mjc3MjQ0IEwxMi40NDQ3NjUyLDIwLjA4OTI4MjcgQzExLjU1MDcyMzYsMjAuNjA5MDIyNyAxMC41MDAyMjQ4LDIwLjkwMjc4ODggOS40NDk3MjU5NSwyMC45MjUzODYyIEM4Ljk0NjgyNzU2LDIwLjkzNjY4NDkgOC41MzMzMzMzMywyMC45ODE4Nzk3IDguNTMzMzMzMzMsMjEuMDE1Nzc1OCBDOC41MzMzMzMzMywyMS4xMjg3NjI3IDkuODk2NzQ2NzMsMjEuNzYxNDg5NyAxMC42OTAyMDg2LDIyLjAxMDA2MSBDMTMuMDcwNTk0MywyMi43NDQ0NzYyIDE1Ljg5ODAwMDgsMjIuNDI4MTEyOCAxOC4wMjEzNDk1LDIxLjE3Mzk1NzUgQzE5LjUzMDA0NDcsMjAuMjgxMzYwNSAyMS4wMzg3Mzk4LDE4LjUwNzQ2NTMgMjEuNzQyNzk3NiwxNi43OTAwNjM1IEMyMi4xMjI3NjUzLDE1Ljg3NDg2OTIgMjIuNTAyNzMyOSwxNC4yMDI2NjIyIDIyLjUwMjczMjksMTMuNDAwNDU0OCBDMjIuNTAyNzMyOSwxMi44ODA3MTQ4IDIyLjUzNjI1OTUsMTIuODEyOTIyNiAyMy4xNjIwODg2LDEyLjE5MTQ5NDMgQzIzLjUzMDg4MDcsMTEuODI5OTM2IDIzLjg3NzMyMTgsMTEuNDM0NDgxNyAyMy45NDQzNzUsMTEuMzIxNDk0NyBDMjQuMDU2MTMwMiwxMS4xMDY4MTk1IDI0LjA0NDk1NDYsMTEuMTA2ODE5NSAyMy40NzUwMDMxLDExLjI5ODg5NzMgQzIyLjUyNTA4NCwxMS42Mzc4NTgyIDIyLjM5MDk3NzcsMTEuNTkyNjYzNCAyMi44NjAzNDk2LDExLjA4NDIyMjEgQzIzLjIwNjc5MDcsMTAuNzIyNjYzOSAyMy42MjAyODQ5LDEwLjA2NzMzOTUgMjMuNjIwMjg0OSw5Ljg3NTI2MTY3IEMyMy42MjAyODQ5LDkuODQxMzY1NTggMjMuNDUyNjUyMSw5Ljg5Nzg1OTA2IDIzLjI2MjY2ODMsOS45OTk1NDczMiBDMjMuMDYxNTA4OSwxMC4xMTI1MzQzIDIyLjYxNDQ4ODEsMTAuMjgyMDE0NyAyMi4yNzkyMjI1LDEwLjM4MzcwMyBMMjEuNjc1NzQ0NSwxMC41NzU3ODA4IEwyMS4xMjgxNDQsMTAuMjAyOTIzOCBDMjAuODI2NDA1LDkuOTk5NTQ3MzIgMjAuNDAxNzM1Miw5Ljc3MzU3MzQgMjAuMTc4MjI0OCw5LjcwNTc4MTIzIEMxOS42MDgyNzMzLDkuNTQ3NTk5NDkgMTguNzM2NTgyOCw5LjU3MDE5Njg4IDE4LjIyMjUwODksOS43NTA5NzYwMSBMMTguMjIyNTA4OSw5Ljc1MDk3NjAxIFoiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
-    height: 14px;
-    top: 22px;
-    width: 16px;
-}
-
-.socials .fb {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjlweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgOSAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTA5My4wMDAwMDAsIC0xNTg5LjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4wMDAwMDAsIDEyNDYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgMTQ2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwNDAuMDAwMDAwLCAxOTAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0LjMwNzY5MiwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMy43NDE0NDg5LDI0LjcwMzgyNTYgTDEzLjc0MTQ0ODksMTUuOTk5MzIwNiBMMTEuOTQ0NjYzOCwxNS45OTkzMjA2IEwxMS45NDQ2NjM4LDEyLjk5OTU4MjkgTDEzLjc0MTQ0ODksMTIuOTk5NTgyOSBMMTMuNzQxNDQ4OSwxMS4xOTg1NTEyIEMxMy43NDE0NDg5LDguNzUxMzY5OTUgMTQuNzU2MDI2MSw3LjI5NjE3NDQzIDE3LjYzODU2LDcuMjk2MTc0NDMgTDIwLjAzODM1MDIsNy4yOTYxNzQ0MyBMMjAuMDM4MzUwMiwxMC4yOTYyNTE5IEwxOC41MzgzMTE1LDEwLjI5NjI1MTkgQzE3LjQxNjIxMjUsMTAuMjk2MjUxOSAxNy4zNDE5ODM0LDEwLjcxNTQ2NzcgMTcuMzQxOTgzNCwxMS40OTc4NDU1IEwxNy4zMzc5MDY4LDEyLjk5OTI0MzEgTDIwLjA1NTMzNjIsMTIuOTk5MjQzMSBMMTkuNzM3MzU3MiwxNS45OTg5ODA4IEwxNy4zMzc5MDY4LDE1Ljk5ODk4MDggTDE3LjMzNzkwNjgsMjQuNzAzODI1NiBMMTMuNzQxNDQ4OSwyNC43MDM4MjU2IFoiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
-    height: 18px;
-    width: 9px;
-    top: 22px;
-}
-
-.socials .in {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE3cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDE3IDE4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTMzLjAwMDAwMCwgLTE1ODkuMDAwMDAwKSIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjAwMDAwMCwgMTI0Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAxNDYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0MC4wMDAwMDAsIDE5MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODguNjE1Mzg1LCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNy4zODQ2MTUsIDcuMzg0NjE1KSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTE1LjEyNDk5NDcsMTYuNzUxMzgwOCBMMi4xMDU3NzQ1MywxNi43NTEzODA4IEMyLjA3MTE1ODIxLDE2Ljc0NTgwNSAyLjAzNjMwOTU3LDE2LjczOTA2NzYgMi4wMDE2OTMyNSwxNi43MzQ4ODU4IEMxLjI4NTkwMjE1LDE2LjY0Mjg4NTQgMC42ODQxODIyNzMsMTYuMDk2NDU4NyAwLjUyNDgwNzgxOSwxNS4zOTE1ODY4IEMwLjUwNjIyMTg3NywxNS4zMDkzNDQgMC40OTQzNzMzMzksMTUuMjI1OTM5NiAwLjQ3OTUwNDU4NSwxNS4xNDMyMzIyIEwwLjQ3OTUwNDU4NSwyLjA4ODIzNDA0IEMwLjQ4NDg0ODA0MywyLjA1Nzc5OTU2IDAuNDkxMTIwNzk5LDIuMDI3NTk3NDEgMC40OTUzMDI2MzYsMS45OTcxNjI5MyBDMC41OTc5ODk5NjYsMS4yNjY3MzU0IDEuMTMxNDA2NTEsMC42ODYxNTcwMyAxLjg1MjMwODc0LDAuNTIxOTAzNzY2IEMxLjkyOTkwNTA1LDAuNTA0MjQ3MTIgMi4wMDkxMjc2MywwLjQ5MzU2MDIwNCAyLjA4Nzg4NTU2LDAuNDc5Mzg4NDIzIEwxNS4xNDI4ODM3LDAuNDc5Mzg4NDIzIEMxNS4xNzMwODU4LDAuNDg0NzMxODgxIDE1LjIwMzA1NTcsMC40OTE0NjkyODUgMTUuMjMzNzIyNSwwLjQ5NTQxODc5OCBDMTUuOTcyMjgxMywwLjU5NjQ3OTg1OSAxNi41NzM3Njg5LDEuMTYyNDIxOCAxNi43MTYxODM3LDEuODkxNjg3NyBDMTYuNzMwMTIzMSwxLjk2Mjc3ODkzIDE2LjczOTg4MDgsMi4wMzQzMzQ4MSAxNi43NTEyNjQ2LDIuMTA1NjU4MzYgTDE2Ljc1MTI2NDYsMTUuMTI1MTEwOSBDMTYuNzM5NDE2MSwxNS4xOTc1OTYgMTYuNzI5MTkzOCwxNS4yNzEwMTA1IDE2LjcxNTI1NDQsMTUuMzQzMjYzNCBDMTYuNTg1Mzg1MSwxNi4wMTE2NjAzIDE2LjA0MjQ0MzMsMTYuNTY1OTg2IDE1LjM3Nzk5NTgsMTYuNzA3MDA2OSBDMTUuMjk0MzU5MSwxNi43MjUxMjgyIDE1LjIwOTU2MDcsMTYuNzM2OTc2NyAxNS4xMjQ5OTQ3LDE2Ljc1MTM4MDggWiBNMi4yMzk4MjU2Myw3LjA3NzE2NTU4IEwyLjIzOTgyNTYzLDcuMTIxMDc0ODYgQzIuMjM5ODI1NjMsOS41MjkxMTYgMi4yMzk1OTMzMSwxMS45MzcxNTcxIDIuMjQwMDU3OTYsMTQuMzQ1MTk4MyBDMi4yNDAwNTc5NiwxNC42OTE1OTM4IDIuNTM5OTg4NiwxNC45ODk0MzM1IDIuODg2Mzg0MSwxNC45ODk0MzM1IEM2LjcwNDg2NTkyLDE0Ljk4OTY2NTggMTAuNTIzMTE1NCwxNC45ODk2NjU4IDE0LjM0MTU5NzIsMTQuOTg5NDMzNSBDMTQuNjkxMjQ1MywxNC45ODk0MzM1IDE0Ljk4OTU0OTcsMTQuNjkyMDU4NCAxNC45ODk1NDk3LDE0LjM0MzEwNzMgQzE0Ljk4OTc4MiwxMS45Mzc4NTQxIDE0Ljk4OTU0OTcsOS41MzI4MzMxOSAxNC45ODk1NDk3LDcuMTI3ODEyMjcgTDE0Ljk4OTU0OTcsNy4wNzc4NjI1NSBMMTMuNDM2MjI5NSw3LjA3Nzg2MjU1IEMxMy42NTU1NDM3LDcuNzc4Nzg0ODkgMTMuNzIyOTE3Nyw4LjQ5MTc4ODEgMTMuNjM2OTU3Nyw5LjIxODQ5ODQ0IEMxMy41NTA1MzMxLDkuOTQ1NDQxMSAxMy4zMTYzNTAyLDEwLjYyMTk2OTQgMTIuOTM0ODczNywxMS4yNDY2ODk0IEMxMi41NTMxNjUsMTEuODcyMTA2MyAxMi4wNTgzMTQyLDEyLjM5MDE4OTUgMTEuNDUyNDEyNSwxMi44MDI1NjUxIEM5Ljg4MTkwMDQxLDEzLjg3MjE4NiA3LjgxNDIxNDM0LDEzLjk2NjI3NzQgNi4xNDc3NTIzLDEzLjAzMDkzOTggQzUuMzA1MzQ0NDcsMTIuNTU4NjI0NiA0LjY0MzkxNzI2LDExLjg5OTk4NTIgNC4xODI3NTM1NywxMS4wNTEzMDQ3IEMzLjQ5NDg0MTM4LDkuNzg0OTA1MDMgMy4zODQ5NTIsOC40NTU3Nzc4NCAzLjc4ODQ5OTI3LDcuMDc2NzAwOTMgQzMuMjczMjA0MDIsNy4wNzcxNjU1OCAyLjc1OTk5OTY5LDcuMDc3MTY1NTggMi4yMzk4MjU2Myw3LjA3NzE2NTU4IFogTTguNjE1NTAwNzgsNS4zMTgwMDYxNSBDNi44MTA4MDU3OSw1LjMxNjg0NDUzIDUuMzQzNjc3OTgsNi43Njg4NzEyNiA1LjMxODM1NDYzLDguNTY1NDM0OSBDNS4yOTIzMzQzMSwxMC40MTAzMjIgNi43NjkyMTk3NSwxMS44NzI4MDMzIDguNTM5NzYzMDYsMTEuOTEwOTA0NSBDMTAuMzgyMDk0NiwxMS45NTAzOTk2IDExLjg3MjIyMjUsMTAuNDc4MzkzIDExLjkxMTAyMDcsOC42ODgxMDIxMSBDMTEuOTUwNzQ4MSw2Ljg0MTgyMTA4IDEwLjQ2MTU0OTUsNS4zMTY4NDQ1MyA4LjYxNTUwMDc4LDUuMzE4MDA2MTUgWiBNMTMuNTYwMDU4NCw0LjY1NzA0MzU4IEwxMy41NjAwNTg0LDQuNjU0MDIzMzYgQzEzLjgyNzY5NTksNC42NTQwMjMzNiAxNC4wOTYyNjI4LDQuNjU5MTM0NSAxNC4zNjQxMzI3LDQuNjUyNjI5NDIgQzE0LjcwODY2OTYsNC42NDQwMzM0MiAxNC45ODkzMTczLDQuMzQ4NzQ5MjYgMTQuOTg5MzE3Myw0LjAwMzc0NzcxIEMxNC45ODk1NDk3LDMuNDkwMDc4NzMgMTQuOTg5NTQ5NywyLjk3NjE3NzQzIDE0Ljk4OTMxNzMsMi40NjI1MDg0NSBDMTQuOTg5MzE3MywyLjA5NDA0MjE1IDE0LjY5Nzc1MDQsMS44MDA4NDg5MSAxNC4zMjk3NDg3LDEuODAwNjE2NTkgQzEzLjgxNzQ3MzcsMS44MDAzODQyNiAxMy4zMDUxOTg2LDEuODAwMTUxOTQgMTIuNzkyNjkxMywxLjgwMDYxNjU5IEMxMi40MjU2MTg5LDEuODAxMDgxMjQgMTIuMTMzMTIyNywyLjA5NDk3MTQ1IDEyLjEzMjg5MDMsMi40NjM0Mzc3NSBDMTIuMTMyNjU4LDIuOTcyNjkyNTcgMTIuMTMxMjY0MSwzLjQ4MTk0NzM4IDEyLjEzNDc0ODksMy45OTE0MzQ1MiBDMTIuMTM1MjEzNiw0LjA2NzQwNDU2IDEyLjE0OTYxNzcsNC4xNDYzOTQ4MiAxMi4xNzM3Nzk0LDQuMjE4NDE1MzQgQzEyLjI2NTc3OTgsNC40ODk1Mzc3NyAxMi41MTQxMzQ1LDQuNjU1ODgxOTYgMTIuODE4MjQ3LDQuNjU3Mjc1OSBDMTMuMDY1NDQsNC42NTc3NDA1NSAxMy4zMTI2MzMsNC42NTcwNDM1OCAxMy41NjAwNTg0LDQuNjU3MDQzNTggWiI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=");
-    height: 18px;
-    width: 17px;
-    top: 22px;
-}
-
-.socials .pi {
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE0cHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDE0IDE4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTc5LjAwMDAwMCwgLTE1ODkuMDAwMDAwKSIgZmlsbD0iI0ZGRkZGRiI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjAwMDAwMCwgMTI0Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAxNDYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA0MC4wMDAwMDAsIDE5MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTMyLjkyMzA3NywgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNi40MTc3MDg4LDcuMDg1NTQ2NDMgQzExLjU1MjE1NDgsNy4wODU1NDY0MyA5LjA5ODkwNDY3LDEwLjU3Mzk0MSA5LjA5ODkwNDY3LDEzLjQ4Mjk0NTggQzkuMDk4OTA0NjcsMTUuMjQ0MzE3NyA5Ljc2NTc2MDEzLDE2LjgxMTMwODcgMTEuMTk2MDM2LDE3LjM5NTI0NzkgQzExLjQzMDU2NzEsMTcuNDkxMTMwNCAxMS42NDA2NDQyLDE3LjM5ODU0NjQgMTEuNzA4NjYwNSwxNy4xMzg4Nzg4IEMxMS43NTU5NzYyLDE2Ljk1OTE3MDIgMTEuODY3ODk2LDE2LjUwNTgwNCAxMS45MTc4Mjc3LDE2LjMxNjk5NjIgQzExLjk4NjQxMjcsMTYuMDYwMTcyMSAxMS45NTk3OTc2LDE1Ljk3MDA5MDMgMTEuNzcwNTM0OSwxNS43NDYyNTA3IEMxMS4zNTgxMTUsMTUuMjU5Nzg2MyAxMS4wOTQ1ODAzLDE0LjYzMDAxIDExLjA5NDU4MDMsMTMuNzM3OTUwMSBDMTEuMDk0NTgwMywxMS4xNDk5MTg1IDEzLjAzMDg4MzgsOC44MzMwNDIxNCAxNi4xMzY2NTgyLDguODMzMDQyMTQgQzE4Ljg4Njc2ODcsOC44MzMwNDIxNCAyMC4zOTc2ODYsMTAuNTEzNDMxNSAyMC4zOTc2ODYsMTIuNzU3NjI4MiBDMjAuMzk3Njg2LDE1LjcxMDQyMjggMTkuMDkwOTMxNCwxOC4yMDI1NzE4IDE3LjE1MDk4ODIsMTguMjAyNTcxOCBDMTYuMDc5Njc0NiwxOC4yMDI1NzE4IDE1LjI3NzY5NjUsMTcuMzE2NTQwMSAxNS41MzQ3NDgsMTYuMjI5ODcxNyBDMTUuODQyNTI3NSwxNC45MzI1NTc0IDE2LjQzODc1MDYsMTMuNTMyNDIyNSAxNi40Mzg3NTA2LDEyLjU5NjAwNDEgQzE2LjQzODc1MDYsMTEuNzU3NzQzMSAxNS45ODg3OTY2LDExLjA1ODU4NTUgMTUuMDU3NjEwMywxMS4wNTg1ODU1IEMxMy45NjI0MTE0LDExLjA1ODU4NTUgMTMuMDgyNjM1MywxMi4xOTE1NDYgMTMuMDgyNjM1MywxMy43MDkyODc3IEMxMy4wODI2MzUzLDE0LjY3NTk2MDggMTMuNDA5Mjk1NSwxNS4zMjk3MzYyIDEzLjQwOTI5NTUsMTUuMzI5NzM2MiBDMTMuNDA5Mjk1NSwxNS4zMjk3MzYyIDEyLjI4ODUwNTIsMjAuMDc4NDc5NiAxMi4wOTIwNzY4LDIwLjkxMDE0MzggQzExLjcwMDgxMjUsMjIuNTY2NDIwMyAxMi4wMzMyNzM0LDI0LjU5Njc4NjUgMTIuMDYxMzY3MSwyNC44MDE4NTkxIEMxMi4wNzc4NTk0LDI0LjkyMzMzMyAxMi4yMzQwMjM5LDI0Ljk1MjIyMjkgMTIuMzA0NzcsMjQuODYwNDM1IEMxMi40MDU3NzA3LDI0LjcyODYxMDcgMTMuNzEwMTM2OCwyMy4xMTgyODUgMTQuMTUzNjA3NywyMS41MDkyMTA0IEMxNC4yNzkwNjI1LDIxLjA1MzU2OTUgMTQuODczOTIwOCwxOC42OTQyNjgzIDE0Ljg3MzkyMDgsMTguNjk0MjY4MyBDMTUuMjI5Njk4MywxOS4zNzI5NTI3IDE2LjI2OTYxOTgsMTkuOTcwNzY4MiAxNy4zNzU1MTAyLDE5Ljk3MDc2ODIgQzIwLjY2NzU5MDIsMTkuOTcwNzY4MiAyMi45MDEwOTUzLDE2Ljk2OTUyMDUgMjIuOTAxMDk1MywxMi45NTIyMzY3IEMyMi45MDEwOTUzLDkuOTE0NTkyMzEgMjAuMzI4MTkxMSw3LjA4NTU0NjQzIDE2LjQxNzcwODgsNy4wODU1NDY0MyBMMTYuNDE3NzA4OCw3LjA4NTU0NjQzIFoiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
-    height: 18px;
-    width: 14px;
-    top: 22px;
-}
-@media only screen and (max-width: 600px) {
-    body {
+    /* MAIN HOME - BANNER */
+    section#homeBanner, .double-down-banner {
+        background-color: white;
+    }
+    section#homeBanner div .img-fluid {
+        height: auto;
         width: 100%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    section#homeBanner p.texto-banner-um {
+        position: relative;
+        margin: auto auto;
+        font-size: 50px;
+        color: rgb(19, 18, 18);
+    }
+    section#homeBanner p.texto-banner-um span {
+        font-size: 60px;
+        color: rgb(19, 18, 18);
+        font-weight: bold;
+    }
+    section#homeBanner p.texto-banner-dois {
+        position: relative;
+        margin: auto auto;
+        color: rgb(19, 18, 18);
+        font-size: 60px;
+    }
+    section#homeBanner li.icons-banner{
+        background-color: #FF6347;
+    }
+    section#homeBanner .carousel-fade{
+        transition: transform 2s ease opacity .3s ease-out;
+    }
+
+
+    /* HOME-SOLIDARIEVAGAS   +   BUSCA */
+    section#homeSolidarieVagas div.card-frase {
+        align-content: center;
+    }
+    section#homeSolidarieVagas h1.vagas{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeSolidarieVagas p.vagas, section#busca p.vagas, section#gruposServicos p.vagas {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+    }
+    section#homeSolidarieVagas div.card-body p {
+        font-size: 20px;
+        color: black;
+    }
+    section#homeSolidarieVagas img.card-img-top {
+        background-color: white;
+        width: 100px;
+        height: 100px;
+    }
+    section#homeSolidarieVagas, .double-down {
+        background-color: white;
+    }
+    section .fa-angle-double-down {
+        color: #FF6347;
+        font-size: 36px;
+        padding: 15px 24px;
+        transition: all 0.8s ease-in-out;
+    }
+    section .fa-angle-double-down:hover {
+        color: rgb(184, 56, 33);
+    }
+    section#homeSolidarieVagas .grupos-servicos, section#gruposServicos .grupos-servicos {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+    }
+    section div.resultado-busca {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    section#homeSolidarieVagas h5.card-vagas, h5.resultado-busca, section#gruposServicos div.card-body h5 {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: start;
+    }
+    section#homeSolidarieVagas article p.card-vagas, section#gruposServicos div.card-body p {
+        font-size: 16px;
+        text-align: justify;
+    }
+    h6.resultado-busca {
+        font-size: 16px;
+        text-align: start;
+        font-weight: bold;
+    }
+    p.resultado-busca {
+        font-size: 14px;
+        text-align: justify;    
+    }
+    section#gruposServicos article div ul {
+        list-style-type: none;
+        text-align: start;
+    }
+    section div.resultado-busca .btn-sm {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 30px;
+    }
+    section div.resultado-busca .btn-sm:hover, section div.resultado-busca .btn-sm:active, section div.resultado-busca .btn-sm:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas input.busca, section#busca input.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        height: 50px;
+        font-size: 16px;
+    }
+    section#homeSolidarieVagas button.busca, section#busca button.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+    }
+    section#homeSolidarieVagas a.busca, section#busca a.busca {
+        color: white;
+        font-size: 16px;
+    }
+    section#homeSolidarieVagas button.busca:hover, section#homeSolidarieVagas button.busca:active, section#homeSolidarieVagas button.busca:focus, section#busca button.busca:hover, section#busca button.busca:active, section#busca button.busca:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas button.veja-mais {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+        width: 350px;
+    }
+    section#homeSolidarieVagas a.veja-mais {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeSolidarieVagas button.veja-mais:hover, section#homeSolidarieVagas button.veja-mais:active, section#homeSolidarieVagas button.veja-mais:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* MAIN HOME - ONGS */
+    section#homeOngs {
+        width: 100%;
+        height: auto;
+    }
+    section#homeOngs div.ongs {
+        background-color: white;
+    }
+    section#homeOngs h1.ongs{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeOngs p.ongs{
+        font-size: 20px;
+    }
+    section#homeOngs article div {
+        background-image: url(../img/logo2.png);
+        background-color: white;
+        height: 450px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: -300px;
+    }
+    section#homeOngs article div p.ongs {
+        position: relative;
+        width: 500px;
+        height: 100vh;
+    }
+    section#homeOngs article div a.ongs {
+        position: relative;
+    }
+    section#homeOngs a.ongs {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    section#homeOngs a.ongs:hover, section#homeOngs a.ongs:active, section#homeOngs a.ongs:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeOngs, .double-down-ongs {
+        background-color: white;
+    }
+
+    /* MAIN HOME - PARCEIROS */
+    section#homeParceiros div.parceiros {
+        background-color: white;
+    }
+    section#homeParceiros h1.parceiros{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeParceiros p.parceiros{
+        font-size: 20px;
+    }
+    section#homeParceiros .card-parceiros img.nubank, img.airbnb, img.extra, img.cobasi{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 250px;
+        height: 140px;
+    }
+    section#homeParceiros .card-parceiros img.mcDonalds, img.adidas, img.carrefour, img.kalunga{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 225px;
+        height: 225px;
+    }
+    section#homeParceiros a.parceiros {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+    }
+    section#homeParceiros a.parceiros {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    section#homeParceiros a.parceiros:hover, section#homeParceiros a.parceiros:active, section#homeParceiros a.parceiros:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        background-color: #FF6347;
+        height: 180px;
+    }
+    footer div p {
+        color: white;
+        font-size: 16px;
+    }
+    footer div h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    footer .fab {
+        background-color: #FF6347;
+        color: white;
+        font-size: 3em;
+        padding: 0px;
+    }
+    footer .fab:hover {
+        background-color: #FF6347;
+        color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
     }
 }
-@media (min-width: 800px) {
-    body {
-        width: 25%;
+
+
+@media only screen and (max-width: 768px), only screen and (max-width: 480px), only screen and (max-width: 320px) {
+    main {
+        width: 100%;
+    }
+    /* HEADER */
+    header .navbar {
+        background-color:white;
+        height: 80px;
+        font-size: 15px;
+        position: fixed;
+    }
+    header nav a.navbar-brand {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 18px;
+    }
+    header button i.fas {
+        border: 2px solid #FF6347;
+        background-color: white;
+        padding: .25rem .75rem;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 5px;
+    }
+    header button i.fa-bars {
+        color: #FF6347;
+        background-color: white;
+    }
+    header .btn-light{
+        background-color: rgb(255, 255, 255, 0);
+        color: #FF6347;
+        border: 0px solid white;
+        font-size: 15px;
+        flex-direction: column;
+        padding-left: 5px;
+    }
+    header .btn-light:hover, header .btn-light:active, header .btn-light:focus {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    header ul li:hover a, header ul li:active a, header ul li:focus a {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+
+    /* HIGOR - modals */
+    /* cor do titulo  */
+    #login {
+        color:  #FF6347;
+    }
+    /* cor do texto  */
+    #texto-login-cadastro{
+        color: black;
+        font-size: 15px;
+    }
+    /* Margin do input */
+    .login-cadastro-input {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    /* cor do botão */
+    .opcoes-cadastros {
+        margin-top: 110px;
+        font-size: 15px;
+    }
+    #botao-login {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        color: white;
+        font-size: 15px;
+    }
+    #botao-login:hover, #botao-login:active, #botao-login:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* fim modal */
+    section div.cadastros {
+        border: 0px solid white;
+        border-radius: 2px;
+    }
+    .img-form{
+        width: 200px;
+    }
+    section.logo-cadastros {
+        position: relative;
+        margin-bottom: 200px;
+    }
+    .formulario{
+        align-items: center;
+        margin : auto;
+        border: 0px solid white;
+        border-radius: 2px;
+        font-size: 15px;
+    } 
+    section div.login {
+        background-color: white;
+    }
+
+
+    /* MAIN HOME - BANNER */
+    section#homeBanner, .double-down-banner {
+        background-color: white;
+    }
+    section#homeBanner div .img-fluid {
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    section#homeBanner p.texto-banner-um {
+        position: relative;
+        margin: auto auto;
+        font-size: 18px;
+        color: rgb(19, 18, 18);
+        top: 10px;
+    }
+    section#homeBanner p.texto-banner-um span {
+        font-size: 25px;
+        color: rgb(19, 18, 18);
+        font-weight: bold;
+    }
+    section#homeBanner p.texto-banner-dois {
+        position: relative;
+        margin: auto auto;
+        color: rgb(19, 18, 18);
+        font-size: 20px;
+    }
+    section#homeBanner li.icons-banner{
+        background-color: #FF6347;
+    }
+    section#homeBanner .carousel-fade{
+        transition: transform 2s ease opacity .3s ease-out;
+    }
+
+
+    /* HOME-SOLIDARIEVAGAS   +   BUSCA */
+    section#homeSolidarieVagas div.card-frase {
+        align-content: center;
+    }
+    section#homeSolidarieVagas h1.vagas{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeSolidarieVagas p.vagas, section#busca p.vagas, section#gruposServicos p.vagas {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+    }
+    section#homeSolidarieVagas div.card-body p {
+        font-size: 18px;
+        color: black;
+    }
+    section#homeSolidarieVagas img.card-img-top {
+        background-color: white;
+        width: 60px;
+        height: 60px;
+    }
+    section#homeSolidarieVagas, .double-down {
+        background-color: white;
+    }
+    section .fa-angle-double-down {
+        color: #FF6347;
+        font-size: 36px;
+        padding: 15px 24px;
+        transition: all 0.8s ease-in-out;
+    }
+    section .fa-angle-double-down:hover {
+        color: rgb(184, 56, 33);
+    }
+    section#homeSolidarieVagas .grupos-servicos, section#gruposServicos .grupos-servicos {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+    }
+    section div.resultado-busca {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+        margin: 2px 1px;
+    }
+    section#homeSolidarieVagas h5.card-vagas, h5.resultado-busca, section#gruposServicos div.card-body h5 {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: start;
+    }
+    section#homeSolidarieVagas article p.card-vagas, section#gruposServicos div.card-body p {
+        font-size: 14px;
+        text-align: justify;
+    }
+    h6.resultado-busca {
+        font-size: 14px;
+        text-align: start;
+        font-weight: bold;
+    }
+    p.resultado-busca {
+        font-size: 14px;
+        text-align: justify;    
+    }
+    section#gruposServicos article div ul {
+        list-style-type: none;
+        text-align: start;
+    }
+    section div.resultado-busca .btn-sm {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 30px;
+    }
+    section div.resultado-busca .btn-sm:hover, section div.resultado-busca .btn-sm:active, section div.resultado-busca .btn-sm:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas input.busca, section#busca input.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        height: 50px;
+        font-size: 14px;
+    }
+    section#homeSolidarieVagas button.busca, section#busca button.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+    }
+    section#homeSolidarieVagas a.busca, section#busca a.busca {
+        color: white;
+        font-size: 14px;
+    }
+    section#homeSolidarieVagas button.busca:hover, section#homeSolidarieVagas button.busca:active, section#homeSolidarieVagas button.busca:focus, section#busca button.busca:hover, section#busca button.busca:active, section#busca button.busca:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas button.veja-mais {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+    }
+    section#homeSolidarieVagas a.veja-mais {
+        color: white;
+        font-size: 14px;
+        text-align: center;
+    }
+    section#homeSolidarieVagas button.veja-mais:hover, section#homeSolidarieVagas button.veja-mais:active, section#homeSolidarieVagas button.veja-mais:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* MAIN HOME - ONGS */
+    section#homeOngs {
+        width: 100%;
+        height: auto;
+    }
+    section#homeOngs div.ongs {
+        background-color: white;
+    }
+    section#homeOngs h1.ongs{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeOngs p.ongs{
+        font-size: 18px;
+    }
+    section#homeOngs article div {
+        background-image: url(../img/logo2.png);
+        background-color: white;
+        height: 450px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: -300px;
+    }
+    section#homeOngs article div p.ongs {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    section#homeOngs article div a.ongs {
+        position: relative;
+    }
+    section#homeOngs a.ongs {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 40px;
+        width: 250px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeOngs a.ongs:hover, section#homeOngs a.ongs:active, section#homeOngs a.ongs:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeOngs, .double-down-ongs {
+        background-color: white;
+    }
+
+    /* MAIN HOME - PARCEIROS */
+    section#homeParceiros div.parceiros {
+        background-color: white;
+    }
+    section#homeParceiros h1.parceiros{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeParceiros p.parceiros{
+        font-size: 18px;
+    }
+    section#homeParceiros .card-parceiros img.nubank, img.airbnb, img.extra, img.cobasi{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 250px;
+        height: 140px;
+    }
+    section#homeParceiros .card-parceiros img.mcDonalds, img.adidas, img.carrefour, img.kalunga{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 225px;
+        height: 225px;
+    }
+    section#homeParceiros a.parceiros {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 40px;
+        width: 250px;
+    }
+    section#homeParceiros a.parceiros {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeParceiros a.parceiros:hover, section#homeParceiros a.parceiros:active, section#homeParceiros a.parceiros:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        background-color: #FF6347;
+        height: 160px;
+    }
+    footer div p {
+        color: white;
+        font-size: 14px;
+    }
+    footer div h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    footer .fab {
+        background-color: #FF6347;
+        color: white;
+        font-size: 2.5em;
+        padding: 0px;
+    }
+    footer .fab:hover {
+        background-color: #FF6347;
+        color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
     }
 }
