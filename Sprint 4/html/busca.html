@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SolidarieVAGAS</title>
+  <!-- LINK BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- LINK FONTAWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- LINK FONT ADOBE -->
+  <link rel="stylesheet" href="https://use.typekit.net/bbn7xbn.css">
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container-fluid p-0 m-0">
+  <header class="container-fluid p-0 m-0">
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <a class="navbar-brand my-auto" href="home.php">
+        <img src="img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
+        SolidarieVAGAS
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-1">
+            <a class="nav-link" style="color:#FF6347" href="busca.html" title="Busca">Buscas</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" style="color:#FF6347" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" style="color:#FF6347" href="cadastro.html">Cadastros</a>
+          </li>
+          <button type="button" class="btn btn-light" data-toggle="modal" id="modalLogin" data-target="#exampleModal">
+            Login</button>
+        </ul>
+      </div>
+    </nav>
+    <!-- Modal  login -->
+    <div class="modal fade aling-intens-center" id="exampleModal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="login">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group col-md-12" id="texto-login-cadastro">
+                <label for="email">E-mail </label>
+                <input type="email" class="form-control login-cadastro-input" id="email" aria-describedby="emailHelp"
+                  placeholder="email@email.com.br">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="form-group col-md-12" id="texto-login-cadastro">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control login-cadastro-input" id="senha"
+                  placeholder="Digite uma senha">
+              </div>
+              <div class="form-group col-md-12 ml-4" id="texto-login-cadastro form-check">
+                <input type="checkbox" class="form-check-input login-casastro-input" id="  exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Manter conectado</label>
+              </div>
+              <button type="submit" class="btn btn-primary ml-3" id="botao-login">Entrar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid p-0">
+
+    <!-- Section 1 - BUSCA -->
+    <section class="container mx-auto my-5 pt-5" id="busca">
+      <article>
+        <p class="lead text-center vagas pt-3">Encontre um profissional para realizar o serviço que você
+          procura:</p>
+        <div class="input-group my-3 d-flex">
+          <input type="text" class="form-control busca" placeholder="Escreva aqui o que você está procurando..."
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn busca" type="button" id="button-addon2">
+              <a href="busca.html" class="btn busca">BUSCAR</a></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 2 - RESULTADO DAS BUSCAS (não devem aparecer enquanto não houver uma busca, depois veremos como fazer-->
+    <section class="container mx-auto" id="resultadoBusca">
+      <article class="row mt-2 mb-5 p-0 text-center">
+        <div class="col-12 col-md-6 resultado-busca d-flex mb-1 mx-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="login.php" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex mb-1 mx-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mr-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mr-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mr-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 resultado-busca d-flex row mb-1 mx-md-auto">
+          <div class="col-12 col-md-6">
+            <img src="img/profissional1.jpg" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
+          </div>
+          <div class="col-12 col-md-6">
+            <h5 class="text-justify resultado-busca pt-1 mt-1">NOME DO PROFISSIONAL</h5>
+            <h6 class="text-justify resultado-busca py-1 my-0">Serviço prestado</h6>
+            <p class="text-justify resultado-busca py-1 my-0">Idade</p>
+            <p class="text-justify resultado-busca py-1 my-0">Texto sobre o profissional. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit.
+              Omnis aperiam mollitia est tempore!</p>
+            <a href="#" class="btn btn-sm text-white mb-2">Solicitar Serviço</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo" aria-label="Footer">
+    <div class="_cont">
+      <div class="socials">
+        <ul>
+          <li><a title="html-koder / test on Twitter" class="tw" target="_blank">Twitter</a></li>
+          <li><a title="html-koder / test on Facebook" class="fb" target="_blank">Facebook</a></li>
+          <li><a title="html-koder / test on Instagram" class="in" target="_blank">Instagram</a></li>
+          <li><a title="html-koder / test on Pinterest" class="pi" target="_blank">Pinterest</a></li>
+        </ul>
+      </div>
+      <div class="top">
+        <div class="right">
+          <form method="post" action="/contact" class="contact-form" accept-charset="UTF-8">
+            <input type="hidden" value="customer" name="form_type" /><input type="hidden" name="utf8" value="✓" />
+            <div>
+              <input type="hidden" id="contact_tags" name="contact[tags]" value="newsletter" />
+              <input type="text" id="contact_email" name="contact[email]"
+                placeholder="inscreva-se para receber noticias">
+              <button type="submit" title="Newsletter Signup">OK</button>
+            </div>
+          </form>
+        </div>
+        <div class="left">
+          <span class="phone">00 0000 00 00</span>
+          <span class="mail">email.salveasbaleias@gmail.com</span>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
