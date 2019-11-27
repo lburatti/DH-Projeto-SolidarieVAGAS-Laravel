@@ -23,10 +23,14 @@ class AddDiversosToPedidosOrcamentosTable extends Migration
     public function down()
     {
         Schema::table('pedidos_orcamentos', function (Blueprint $table) {
-            $table->dropForeign('id_usuario');
-            $table->dropForeign('id_usuario');
+            $table->dropForeign('id_user_contratante');
+            $table->dropColumn('id_user_contratante');
+            $table->dropForeign('id_user_ong');
+            $table->dropColumn('id_user_ong');
             $table->dropForeign('id_profissional');
+            $table->dropColumn('id_profissional');
             $table->dropForeign('id_servico');
+            $table->dropColumn('id_servico');
         });
     }
 }

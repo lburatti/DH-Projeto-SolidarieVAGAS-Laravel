@@ -20,7 +20,9 @@ class AddDiversosToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropForeign('id_ong');
+            $table->dropColumn('id_ong');
             $table->dropForeign('id_contratante');
+            $table->dropColumn('id_contratante');
         });
     }
 }

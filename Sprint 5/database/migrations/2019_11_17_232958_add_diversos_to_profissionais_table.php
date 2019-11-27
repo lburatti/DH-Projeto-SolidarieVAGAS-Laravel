@@ -22,8 +22,11 @@ class AddDiversosToProfissionaisTable extends Migration
     {
         Schema::table('profissionais', function (Blueprint $table) {
             $table->dropForeign('id_ong');
+            $table->dropColumn('id_ong');
             $table->dropForeign('id_grupoServicos');
+            $table->dropColumn('id_grupoServicos');
             $table->dropForeign('id_servico');
+            $table->dropColumn('id_servico');
         });
     }
 }

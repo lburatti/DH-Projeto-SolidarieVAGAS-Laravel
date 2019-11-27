@@ -18,6 +18,7 @@ class AddServicosToGruposServicosTable extends Migration
     {
         Schema::table('grupos_servicos', function (Blueprint $table) {
             $table->dropForeign('id_servico');
+            $table->dropColumn('id_servico');
         });
     }
 }
