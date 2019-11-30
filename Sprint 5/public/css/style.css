@@ -1,0 +1,827 @@
+/* TODAS AS PAGINAS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: raleway, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    outline: none;
+    text-transform: none;
+    font-variant: normal;
+    font-stretch: expanded;
+}
+
+ul.navbar-nav.ml-auto {
+    background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    /* HEADER */
+    header .navbar {
+        background-color:white;
+        height: 80px;
+        font-size: 20px;
+        position: fixed;
+    }
+    header nav a.navbar-brand {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 25px;
+    }
+    header button i.fas {
+        border: 2px solid #FF6347;
+        background-color: white;
+        padding: .25rem .75rem;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 5px;
+    }
+    header button i.fa-bars {
+        color: #FF6347;
+        background-color: white;
+    }
+    header .btn-light{
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+        font-size: 20px;
+    }
+    header .btn-light:hover, header .btn-light:active, header .btn-light:focus {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    header ul li:hover a, header ul li:active a, header ul li:focus a {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    /* HEADER ADM */
+    header#adm .navbar {
+        background-color:white;
+        height: 80px;
+        font-size: 15px;
+        position: fixed;
+    }
+    header#adm nav a.navbar-brand {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 20px;
+    }
+    header#adm #botao-sair{
+        background-color: #FF6347;
+        color: white;
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    header#adm #botao-sair:hover, header#adm #botao-sair:active, header#adm #botao-sair:focus {
+        font-weight: bold;
+        background-color:rgb(184, 56, 33);
+        color: white;
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+    }
+    header#adm ul li:hover a, header ul li:active a, header ul li:focus a {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    
+
+    /* HIGOR - modals */
+    /* cor do titulo  */
+    #login {
+        color:  #FF6347;
+    }
+    /* cor do texto  */
+    #texto-login-cadastro{
+        color: black;
+        font-size: 18px;
+    }
+    /* Margin do input */
+    .login-cadastro-input {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        font-size: 18px;
+    }
+    input.login-cadastro-input:focus {
+        background-color: rgb(207, 205, 205);
+    }
+    /* cor do botão */
+    .opcoes-cadastros {
+        margin-top: 110px;
+        font-size: 18px;
+    }
+    #botao-login {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        color: white;
+        font-size: 18px;
+    }
+    #botao-login:hover, #botao-login:active, #botao-login:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* fim modal */
+    section div.cadastros {
+        border: 0px solid white;
+        border-radius: 2px;
+    }
+    .img-form{
+        width: 200px;
+    }
+    section.logo-cadastros {
+        position: relative;
+        margin-bottom: 200px;
+    }
+    .formulario{
+        align-items: center;
+        margin : auto;
+        border: 0px solid white;
+        border-radius: 2px;
+        font-size: 18px;
+    } 
+    section div.login {
+        background-color: white;
+    }
+
+
+    /* MAIN HOME - BANNER */
+    section#homeBanner, .double-down-banner {
+        background-color: white;
+    }
+    section#homeBanner div .img-fluid {
+        height: auto;
+        width: 100%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    section#homeBanner p.texto-banner-um {
+        position: relative;
+        margin: auto auto;
+        font-size: 50px;
+        color: rgb(19, 18, 18);
+    }
+    section#homeBanner p.texto-banner-um span {
+        font-size: 60px;
+        color: rgb(19, 18, 18);
+        font-weight: bold;
+    }
+    section#homeBanner p.texto-banner-dois {
+        position: relative;
+        margin: auto auto;
+        color: rgb(19, 18, 18);
+        font-size: 60px;
+    }
+    section#homeBanner li.icons-banner{
+        background-color: #FF6347;
+    }
+    section#homeBanner .carousel-fade{
+        transition: transform 2s ease opacity .3s ease-out;
+    }
+
+
+    /* HOME-SOLIDARIEVAGAS   +   BUSCA */
+    section#homeSolidarieVagas div.card-frase {
+        align-content: center;
+    }
+    section#homeSolidarieVagas h1.vagas{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeSolidarieVagas p.vagas, section#busca p.vagas, section#gruposServicos p.vagas {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+    }
+    section#homeSolidarieVagas div.card-body p {
+        font-size: 20px;
+        color: black;
+    }
+    section#homeSolidarieVagas img.card-img-top {
+        background-color: white;
+        width: 100px;
+        height: 100px;
+    }
+    section#homeSolidarieVagas, .double-down {
+        background-color: white;
+    }
+    section .fa-angle-double-down {
+        color: #FF6347;
+        font-size: 36px;
+        padding: 15px 24px;
+        transition: all 0.8s ease-in-out;
+    }
+    section .fa-angle-double-down:hover {
+        color: rgb(184, 56, 33);
+    }
+    section#homeSolidarieVagas .grupos-servicos, section#gruposServicos .grupos-servicos {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+    }
+    section div.resultado-busca, section#adm div.panel-default {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        /* margin-right: 15px; */
+    }
+    section#homeSolidarieVagas h5.card-vagas, h5.resultado-busca, section#gruposServicos div.card-body h5, section#adm div.panel-heading {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: start;
+    }
+    section#homeSolidarieVagas article p.card-vagas, section#gruposServicos div.card-body p {
+        font-size: 16px;
+        text-align: justify;
+    }
+    h6.resultado-busca {
+        font-size: 16px;
+        text-align: start;
+        font-weight: bold;
+    }
+    p.resultado-busca {
+        font-size: 14px;
+        text-align: justify;    
+    }
+    section#gruposServicos article div ul {
+        list-style-type: none;
+        text-align: start;
+    }
+    section div.resultado-busca .btn-sm {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 30px;
+    }
+    section div.resultado-busca .btn-sm:hover, section div.resultado-busca .btn-sm:active, section div.resultado-busca .btn-sm:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas input.busca, section#busca input.busca, section#adm input.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        height: 50px;
+        font-size: 16px;
+    }
+    section#homeSolidarieVagas button.busca, section#busca button.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+    }
+    section#homeSolidarieVagas a.busca, section#busca a.busca {
+        color: white;
+        font-size: 16px;
+    }
+    section#homeSolidarieVagas button.busca:hover, section#homeSolidarieVagas button.busca:active, section#homeSolidarieVagas button.busca:focus, section#busca button.busca:hover, section#busca button.busca:active, section#busca button.busca:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas button.veja-mais {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+        width: 350px;
+    }
+    section#homeSolidarieVagas a.veja-mais {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeSolidarieVagas button.veja-mais:hover, section#homeSolidarieVagas button.veja-mais:active, section#homeSolidarieVagas button.veja-mais:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* MAIN HOME - ONGS */
+    section#homeOngs {
+        width: 100%;
+        height: auto;
+    }
+    section#homeOngs div.ongs {
+        background-color: white;
+    }
+    section#homeOngs h1.ongs{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeOngs p.ongs{
+        font-size: 20px;
+    }
+    section#homeOngs article div {
+        background-image: url(../img/logo2.png);
+        background-color: white;
+        height: 450px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: -300px;
+    }
+    section#homeOngs article div p.ongs {
+        position: relative;
+        width: 500px;
+        height: 100vh;
+    }
+    section#homeOngs article div a.ongs {
+        position: relative;
+    }
+    section#homeOngs a.ongs {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    section#homeOngs a.ongs:hover, section#homeOngs a.ongs:active, section#homeOngs a.ongs:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeOngs, .double-down-ongs {
+        background-color: white;
+    }
+
+    /* MAIN HOME - PARCEIROS */
+    section#homeParceiros div.parceiros {
+        background-color: white;
+    }
+    section#homeParceiros h1.parceiros{
+        text-align: center;
+        font-size: 45px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeParceiros p.parceiros{
+        font-size: 20px;
+    }
+    section#homeParceiros .card-parceiros img.nubank, img.airbnb, img.extra, img.cobasi{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 250px;
+        height: 140px;
+    }
+    section#homeParceiros .card-parceiros img.mcDonalds, img.adidas, img.carrefour, img.kalunga{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 225px;
+        height: 225px;
+    }
+    section#homeParceiros a.parceiros {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+    }
+    section#homeParceiros a.parceiros {
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    section#homeParceiros a.parceiros:hover, section#homeParceiros a.parceiros:active, section#homeParceiros a.parceiros:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        background-color: #FF6347;
+        height: 180px;
+    }
+    footer div p {
+        color: white;
+        font-size: 16px;
+    }
+    footer div h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    footer .fab {
+        background-color: #FF6347;
+        color: white;
+        font-size: 3em;
+        padding: 0px;
+    }
+    footer .fab:hover {
+        background-color: #FF6347;
+        color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+}
+
+
+@media only screen and (max-width: 768px), only screen and (max-width: 480px), only screen and (max-width: 320px) {
+    main {
+        width: 100%;
+    }
+    /* HEADER */
+    header .navbar {
+        background-color:white;
+        height: 80px;
+        font-size: 15px;
+        position: fixed;
+    }
+    header nav a.navbar-brand {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 18px;
+    }
+    header button i.fas {
+        border: 2px solid #FF6347;
+        background-color: white;
+        padding: .25rem .75rem;
+        font-size: 20px;
+        line-height: 1;
+        border-radius: 5px;
+    }
+    header button i.fa-bars {
+        color: #FF6347;
+        background-color: white;
+    }
+    header .btn-light{
+        background-color: rgb(255, 255, 255, 0);
+        color: #FF6347;
+        border: 0px solid white;
+        font-size: 15px;
+        flex-direction: column;
+        padding-left: 5px;
+    }
+    header .btn-light:hover, header .btn-light:active, header .btn-light:focus {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    header ul li:hover a, header ul li:active a, header ul li:focus a {
+        font-weight: bold;
+        background-color: white;
+        color: #FF6347;
+        border: 0px solid white;
+    }
+    ul.navbar-nav.ml-auto {
+        background: #fff;
+    }
+
+    /* HIGOR - modals */
+    /* cor do titulo  */
+    #login {
+        color:  #FF6347;
+    }
+    /* cor do texto  */
+    #texto-login-cadastro{
+        color: black;
+        font-size: 15px;
+    }
+    /* Margin do input */
+    .login-cadastro-input {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    /* cor do botão */
+    .opcoes-cadastros {
+        margin-top: 110px;
+        font-size: 15px;
+    }
+    #botao-login {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        color: white;
+        font-size: 15px;
+    }
+    #botao-login:hover, #botao-login:active, #botao-login:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* fim modal */
+    section div.cadastros {
+        border: 0px solid white;
+        border-radius: 2px;
+    }
+    .img-form{
+        width: 200px;
+    }
+    section.logo-cadastros {
+        position: relative;
+        margin-bottom: 200px;
+    }
+    .formulario{
+        align-items: center;
+        margin : auto;
+        border: 0px solid white;
+        border-radius: 2px;
+        font-size: 15px;
+    } 
+    section div.login {
+        background-color: white;
+    }
+
+
+    /* MAIN HOME - BANNER */
+    section#homeBanner, .double-down-banner {
+        background-color: white;
+    }
+    section#homeBanner div .img-fluid {
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        opacity: 0.8;
+    }
+    section#homeBanner p.texto-banner-um {
+        position: relative;
+        margin: auto auto;
+        font-size: 18px;
+        color: rgb(19, 18, 18);
+        top: 10px;
+    }
+    section#homeBanner p.texto-banner-um span {
+        font-size: 25px;
+        color: rgb(19, 18, 18);
+        font-weight: bold;
+    }
+    section#homeBanner p.texto-banner-dois {
+        position: relative;
+        margin: auto auto;
+        color: rgb(19, 18, 18);
+        font-size: 20px;
+    }
+    section#homeBanner li.icons-banner{
+        background-color: #FF6347;
+    }
+    section#homeBanner .carousel-fade{
+        transition: transform 2s ease opacity .3s ease-out;
+    }
+
+
+    /* HOME-SOLIDARIEVAGAS   +   BUSCA */
+    section#homeSolidarieVagas div.card-frase {
+        align-content: center;
+    }
+    section#homeSolidarieVagas h1.vagas{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeSolidarieVagas p.vagas, section#busca p.vagas, section#gruposServicos p.vagas {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+    }
+    section#homeSolidarieVagas div.card-body p {
+        font-size: 18px;
+        color: black;
+    }
+    section#homeSolidarieVagas img.card-img-top {
+        background-color: white;
+        width: 60px;
+        height: 60px;
+    }
+    section#homeSolidarieVagas, .double-down {
+        background-color: white;
+    }
+    section .fa-angle-double-down {
+        color: #FF6347;
+        font-size: 36px;
+        padding: 15px 24px;
+        transition: all 0.8s ease-in-out;
+    }
+    section .fa-angle-double-down:hover {
+        color: rgb(184, 56, 33);
+    }
+    section#homeSolidarieVagas .grupos-servicos, section#gruposServicos .grupos-servicos {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+    }
+    section div.resultado-busca, section#adm div.panel-default {
+        border: 2px solid #FF6347;
+        border-radius: 10px;
+        margin: 2px 1px;
+    }
+    section#homeSolidarieVagas h5.card-vagas, h5.resultado-busca, section#gruposServicos div.card-body h5, section#adm div.panel-heading {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: start;
+    }
+    section#homeSolidarieVagas article p.card-vagas, section#gruposServicos div.card-body p {
+        font-size: 14px;
+        text-align: justify;
+    }
+    h6.resultado-busca {
+        font-size: 14px;
+        text-align: start;
+        font-weight: bold;
+    }
+    p.resultado-busca {
+        font-size: 14px;
+        text-align: justify;    
+    }
+    section#gruposServicos article div ul {
+        list-style-type: none;
+        text-align: start;
+    }
+    section div.resultado-busca .btn-sm {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 30px;
+    }
+    section div.resultado-busca .btn-sm:hover, section div.resultado-busca .btn-sm:active, section div.resultado-busca .btn-sm:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas input.busca, section#busca input.busca, section#adm input.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        height: 50px;
+        font-size: 14px;
+    }
+    section#homeSolidarieVagas button.busca, section#busca button.busca {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 50px;
+    }
+    section#homeSolidarieVagas a.busca, section#busca a.busca {
+        color: white;
+        font-size: 14px;
+    }
+    section#homeSolidarieVagas button.busca:hover, section#homeSolidarieVagas button.busca:active, section#homeSolidarieVagas button.busca:focus, section#busca button.busca:hover, section#busca button.busca:active, section#busca button.busca:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeSolidarieVagas button.veja-mais {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 45px;
+        width: 300px;
+    }
+    section#homeSolidarieVagas a.veja-mais {
+        color: white;
+        font-size: 14px;
+        text-align: center;
+    }
+    section#homeSolidarieVagas button.veja-mais:hover, section#homeSolidarieVagas button.veja-mais:active, section#homeSolidarieVagas button.veja-mais:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+    /* MAIN HOME - ONGS */
+    section#homeOngs {
+        width: 100%;
+        height: auto;
+    }
+    section#homeOngs div.ongs {
+        background-color: white;
+    }
+    section#homeOngs h1.ongs{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeOngs p.ongs{
+        font-size: 18px;
+    }
+    section#homeOngs article div {
+        background-image: url(../img/logo2.png);
+        background-color: white;
+        height: 450px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: -300px;
+    }
+    section#homeOngs article div p.ongs {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    section#homeOngs article div a.ongs {
+        position: relative;
+    }
+    section#homeOngs a.ongs {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 40px;
+        width: 250px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeOngs a.ongs:hover, section#homeOngs a.ongs:active, section#homeOngs a.ongs:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+    section#homeOngs, .double-down-ongs {
+        background-color: white;
+    }
+
+    /* MAIN HOME - PARCEIROS */
+    section#homeParceiros div.parceiros {
+        background-color: white;
+    }
+    section#homeParceiros h1.parceiros{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FF6347;
+    }
+    section#homeParceiros p.parceiros{
+        font-size: 18px;
+    }
+    section#homeParceiros .card-parceiros img.nubank, img.airbnb, img.extra, img.cobasi{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 250px;
+        height: 140px;
+    }
+    section#homeParceiros .card-parceiros img.mcDonalds, img.adidas, img.carrefour, img.kalunga{
+        border: 0px solid #FF6347;
+        border-radius: 2px;
+        width: 225px;
+        height: 225px;
+    }
+    section#homeParceiros a.parceiros {
+        border: 2px solid #FF6347;
+        border-radius: 2px;
+        background-color: #FF6347;
+        height: 40px;
+        width: 250px;
+    }
+    section#homeParceiros a.parceiros {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    section#homeParceiros a.parceiros:hover, section#homeParceiros a.parceiros:active, section#homeParceiros a.parceiros:focus {
+        background-color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        background-color: #FF6347;
+        height: 160px;
+    }
+    footer div p {
+        color: white;
+        font-size: 14px;
+    }
+    footer div h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    footer .fab {
+        background-color: #FF6347;
+        color: white;
+        font-size: 2.5em;
+        padding: 0px;
+    }
+    footer .fab:hover {
+        background-color: #FF6347;
+        color: rgb(184, 56, 33);
+        transition: all 0.8s ease-in-out;
+    }
+}
