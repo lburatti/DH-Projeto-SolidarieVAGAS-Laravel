@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.logado')
 
 @section('content')
     <section class="container my-3 py-5" id="adm">
@@ -6,7 +6,7 @@
         <article class="mt-5 px-0">
             <div class="panel p-3">
                 <div class="panel-heading">
-                    Busca de Pedidos Enviados
+                    Busca de Pedidos Recebidos
                 </div>
                 <hr>
                 <div class="panel-body px-3">
@@ -38,7 +38,7 @@
                             <tr>
                                 <th>ID do Pedido
                                 </th>
-                                <th>ONG
+                                <th>Quem Solicitou
                                 </th>
                                 <th>E-mail
                                 </th>
@@ -53,7 +53,7 @@
                         <tbody>
                             <tr class="text-center">
                                 <th scope="row">id_pedido</th>
-                                <td>nome ong</td>
+                                <td>nome contratante</td>
                                 <td>email</td>
                                 <td>id_servico</td>
                                 <td>id_profissional</td>
@@ -61,7 +61,7 @@
                             </tr>
                             <tr class="text-center">
                                 <th scope="row">id_pedido</th>
-                                <td>nome ong</td>
+                                <td>nome contratante</td>
                                 <td>email</td>
                                 <td>id_servico</td>
                                 <td>id_profissional</td>
@@ -69,7 +69,7 @@
                             </tr>
                             <tr class="text-center">
                                 <th scope="row">id_pedido</th>
-                                <td>nome ong</td>
+                                <td>nome contratante</td>
                                 <td>email</td>
                                 <td>id_servico</td>
                                 <td>id_profissional</td>

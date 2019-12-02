@@ -12,7 +12,7 @@ class AddFieldsToProfissionais extends Migration
             $table->string('nome', 50);
             $table->string('cpf', 11)->unique();
             $table->string('rg', 10);
-            $table->date('data_de_nascimento');
+            $table->string('data_de_nascimento');
             $table->binary('foto')->nullable();
             $table->string('tempo_na_ong', 20)->nullable();
             $table->string('resumo_historia', 500)->nullable();

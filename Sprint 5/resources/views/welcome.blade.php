@@ -75,12 +75,12 @@
             <p class="lead text-center vagas pt-3">Encontre um profissional para realizar o serviço que você
                 procura:</p>
             <div class="input-group my-3 d-flex">
-                <input type="text" class="form-control busca"
+                <input type="text" class="form-control busca" name="servico"
                     placeholder="Escreva aqui o que você está procurando..." aria-label="Recipient's username"
                     aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn busca" type="button" id="button-addon2">
-                        <a href="busca.php" class="btn busca">BUSCAR</a></button>
+                        <a href="{{ route('busca.pesquisar') }}" class="btn busca">BUSCAR</a></button>
                 </div>
             </div>
         </article>
@@ -133,7 +133,7 @@
             </div>
             <div class="d-flex justify-content-center veja-mais my-4">
                 <button class="btn veja-mais" type="button">
-                    <a href="servicos.php" class="btn veja-mais">VEJA MAIS GRUPOS DE SERVIÇOS</a></button>
+                    <a href="{{ route('servicos') }}" class="btn veja-mais">VEJA MAIS GRUPOS DE SERVIÇOS</a></button>
             </div>
         </article>
     </section>
@@ -155,7 +155,7 @@
                     cadastro, mãos a obra: você já poderá começar a cadastrar pessoas afiliadas à sua instituição.
                     Com uma foto, texto e algumas informações pessoais, as pessoas vinculadas à sua ONG, já estarão
                     aptas a oferecerem seus trabalhos, para o Brasil todo, através da nossa plataforma.<br>
-                    <a class="btn d-flex justify-content-center ongs" href="cadastro.php" role="button">CADASTRE
+                    <a class="btn d-flex justify-content-center ongs" href="{{ route('cadastro') }}" role="button">CADASTRE
                         SUA ONG</a>
                 </p>
             </div>

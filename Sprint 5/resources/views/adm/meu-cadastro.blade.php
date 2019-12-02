@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.logado')
 
 @section('content')
 <section class="container my-5 py-5" id="adm">

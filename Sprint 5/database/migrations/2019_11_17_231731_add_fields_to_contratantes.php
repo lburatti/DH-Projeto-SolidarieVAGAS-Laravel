@@ -11,7 +11,7 @@ class AddFieldsToContratantes extends Migration
         Schema::table('contratantes', function (Blueprint $table) {
             $table->string('nome', 50);
             $table->string('cpf', 11)->unique();
-            $table->date('data_de_nascimento');
+            $table->string('data_de_nascimento');
             $table->string('cep', 8);
             $table->string('logradouro', 50);
             $table->string('numero', 10);

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.logado')
 
 @section('content')
     <section class="container my-3 py-5" id="adm">
@@ -22,7 +22,7 @@
                         <div class="form-group ml-auto px-3">
                             <button type="submit" class="mb-1 btn btn-primary" id="botao-login">Buscar</button>
                             <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
-                                <a class="text-white text-decoration-none" href="adm_cadastro_prof.php">Cadastrar</a>
+                                <a class="text-white text-decoration-none" href="{{ route('adm.cadastro-profissionais') }}">Cadastrar</a>
                             </button>
                         </div>
                     </div>

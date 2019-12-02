@@ -11,7 +11,7 @@ class AddFieldsToOngs extends Migration
         Schema::table('ongs', function (Blueprint $table) {
             $table->string('nome', 50);
             $table->string('cnpj', 14)->unique();
-            $table->date('data_de_inicio');
+            $table->string('data_de_inicio');
             $table->string('finalidade_ong', 100);
             $table->binary('logo')->nullable();
             $table->string('sobre_ong', 500)->nullable();

@@ -32,8 +32,8 @@
         <!-- HEADER -->
         <header class="container-fluid p-0 m-0">
             <nav class="navbar fixed-top navbar-expand-lg">
-                <a class="navbar-brand my-auto" href="home.php">
-                    <img src="img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
+                <a class="navbar-brand my-auto" href="{{ route('welcome') }}">
+                    <img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
                     SolidarieVAGAS
                 </a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,13 +42,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="busca.php" title="Busca">Buscas</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('busca.index') }}" title="Busca">Buscas</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="servicos.php">Serviços</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('servicos') }}">Serviços</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="cadastro.php">Cadastros</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('cadastro') }}">Cadastros</a>
                         </li>
                         <button type="button" class="btn btn-light" data-toggle="modal" id="modalLogin" data-target="#exampleModal">
                             Login</button>

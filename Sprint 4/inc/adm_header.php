@@ -19,6 +19,9 @@
                         <a class="nav-link" style="color:#FF6347" href="adm_niveis_acesso.php">Níveis de acesso(1)</a>
                     </li>
                     <li class="nav-item mx-1">
+                        <a class="nav-link" style="color:#FF6347" href="adm_servicos.php">Serviços(1)</a>
+                    </li>
+                    <li class="nav-item mx-1">
                         <a class="nav-link" style="color:#FF6347" href="adm_meu_cadastro.php">Meu cadastro(2,3)</a>
                     </li>
                     <li class="nav-item mx-1">

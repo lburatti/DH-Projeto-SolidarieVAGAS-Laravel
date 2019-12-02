@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Servico extends Model
+class NivelAcesso extends Model
 {
-    protected $table = "servicos";
+    protected $table = "niveis_acesso";
     protected $primaryKey = "id";
     protected $guarded = [];
 
     protected $fillable = [
-        "nome", "descricao", "id_grupo_servicos"
+        "nome"
     ];
 }
