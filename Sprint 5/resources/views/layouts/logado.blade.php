@@ -55,13 +55,13 @@
                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro') }}">Meu cadastro(2,3)</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.profissionais') }}">Profissionais(2)</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.profissionais.index') }}">Profissionais(2)</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-recebidos') }}">Pedidos Recebidos(2)</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-recebidos.index') }}">Pedidos Recebidos(2)</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-recebidos') }}">Pedidos enviados(3)</a>
+                            <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-enviados.index') }}">Pedidos enviados(3)</a>
                         </li>
                         <button type="submit" class="btn btn-light" id="botao-sair">
                             <a class="text-white text-decoration-none" href="home.php">Sair</a>

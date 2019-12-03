@@ -80,7 +80,7 @@
                     aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn busca" type="button" id="button-addon2">
-                        <a href="{{ route('busca.pesquisar') }}" class="btn busca">BUSCAR</a></button>
+                        <a href="" class="btn busca">BUSCAR</a></button>
                 </div>
             </div>
         </article>

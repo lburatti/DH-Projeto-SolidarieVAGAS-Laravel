@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class PedidoOrcamento extends Model
 {
-    protected $table = "pedidos_orcamento";
+    protected $table = "pedidos_orcamentos";
     protected $primaryKey = "id";
-    protected $timestamps = false;
     protected $guarded = [];
 
     protected $fillable = [

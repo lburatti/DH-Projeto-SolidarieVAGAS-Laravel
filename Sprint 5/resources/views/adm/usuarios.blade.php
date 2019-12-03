@@ -26,7 +26,11 @@
                         </select>
                     </div>
                     <div class="form-group ml-auto px-3">
-                        <button type="submit" class="mb-1 btn btn-primary" id="botao-login">Buscar</button>
+                        @csrf
+                        @method('POST')
+                        <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
+                            <a href="{{ url('/adm/usuarios/pesquisar') }}"></a>
+                            Buscar</button>
                     </div>
                 </div>
             </div>

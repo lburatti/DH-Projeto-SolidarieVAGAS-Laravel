@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // SOLIDARIE-VAGAS
 Route::get('/', function () {
     return view('welcome');
@@ -49,9 +38,9 @@ Route::delete('/adm/niveis-acesso/excluir/{id}', 'Adm\NiveisAcessoController@exc
 //USUARIOS
 Route::get('/adm/usuarios', 'Adm\UsuariosController@index')->name('adm.usuarios.index');
 // pesquisar
-Route::post('/adm/usuarios', 'Adm\UsuariosController@pesquisar')->name('adm.usuarios.pesquisar');
+Route::post('/adm/usuarios/pesquisar', 'Adm\UsuariosController@pesquisar')->name('adm.usuarios.pesquisar');
 // editar
-Route::get('/adm/usuarios/editar', 'Adm\UsuariosController@editar')->name('adm.usuarios.editar');
+Route::get('/adm/usuarios/editar/{id}', 'Adm\UsuariosController@editar')->name('adm.usuarios.editar');
 Route::put('/adm/usuarios/editar/{id}', 'Adm\UsuariosController@atualizarUsuario')->name('adm.usuarios.atualizarUsuario');
 // excluir
 Route::delete('/adm/usuarios/excluir/{id}', 'Adm\UsuariosController@excluirUsuario')->name('adm.usuarios.excluirUsuario');
@@ -76,19 +65,27 @@ Route::get('/adm/meu-cadastro', function () {
 })->name('adm.meu-cadastro');
 
 //PROFISSIONAIS
-Route::get('/adm/profissionais', function () {
-    return view('adm.profissionais');
-})->name('adm.profissionais');
+Route::get('/adm/profissionais', 'Adm\ProfissionaisController@index')->name('adm.profissionais.index');
+// pesquisar
+Route::get('/adm/profissionais/pesquisar', 'Adm\ProfissionaisController@pesquisar')->name('adm.profissionais.pesquisar');
+// criar
+Route::get('/adm/profissionais/criar', 'Adm\ProfissionaisController@criar')->name('adm.profissionais.criar');
+Route::post('/adm/profissionais/criar', 'Adm\ProfissionaisController@criarProfissional')->name('adm.profissionais.criarProfissional');
+// editar
+Route::get('/adm/profissionais/editar', 'Adm\ProfissionaisController@editar')->name('adm.profissionais.editar');
+Route::put('/adm/profissionais/editar/{id}', 'Adm\ProfissionaisController@atualizar')->name('adm.profissionais.atualizar');
+// excluir
+Route::delete('/adm/profissionais/excluir/{id}', 'Adm\ProfissionaisController@excluir')->name('adm.profissionais.excluir');
 
 //PEDIDOS RECEBIDOS
-Route::get('/adm/pedidos-recebidos', function () {
-    return view('adm.pedidos-recebidos');
-})->name('adm.pedidos-recebidos');
+Route::get('/adm/pedidos-recebidos', 'Adm\PedidosRecebidosController@index')->name('adm.pedidos-recebidos.index');
+// pesquisar
+Route::post('/adm/pedidos-recebidos', 'Adm\PedidosRecebidosController@pesquisar')->name('adm.pedidos-recebidos.pesquisar');
 
 //PEDIDOS ENVIADOS
-Route::get('/adm/pedidos-enviados', function () {
-    return view('adm.pedidos-enviados');
-})->name('adm.pedidos-enviados');
+Route::get('/adm/pedidos-enviados', 'Adm\PedidosEnviadosController@index')->name('adm.pedidos-enviados.index');
+// pesquisar
+Route::post('/adm/pedidos-enviados', 'Adm\PedidosEnviadosController@pesquisar')->name('adm.pedidos-enviados.pesquisar');
 
 //CADASTRO PROFISSIONAIS
 Route::get('/adm/cadastro-profissionais', function () {

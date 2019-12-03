@@ -12,25 +12,27 @@ class UsuariosController extends Controller
     {
         return view('adm.usuarios');
     }
-    
+
     public function pesquisar(Request $request)
     {
-        $usuario = $request->input('nome');
-        $usuario = $request->input('nivel_acesso');
+        if (empty($request)) {
+            $usuario = User::all();
+            return view('adm.usuarios', $usuario);
+            // retornar mensagem de usuario não encontrado
+        } else {
+            $usuario = $request->input('nome');
+            $usuario = $request->input('nivel_acesso');
 
-        $id_usuario = User::where("nome", "like", "%$usuario%")->get();
+            $id_usuario = User::where("nome", "like", "%$usuario%")->get();
 
-        if (isset($id_usuario)) {
-            return $id_usuario;
+            return view('adm.usuarios', $id_usuario);
         }
-        return view('adm.usuarios');
     }
 
     public function editar($id)
     {
         $usuario = User::find($id);
         return view('adm.usuarios.editar')->with('usuario', $usuario);
-        
     }
 
     public function atualizarUsuario(Request $request, $id)
@@ -54,6 +56,6 @@ class UsuariosController extends Controller
         $usuario = User::find($id);
         $usuario->delete();
 
-		return view('adm.usuarios');
+        return view('adm.usuarios');
     }
 }
