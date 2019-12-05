@@ -23,23 +23,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @csrf
-                        @method('GET')
-                        @foreach(\App\GrupoServicos::all() as $grupoServico)
+                        @foreach(App\GrupoServicos::all() as $grupoServico)
                         <tr class="text-center">
                             <th scope="row">{{$grupoServico->id}}</th>
                             <td>{{$grupoServico->nome}}</td>
                             <td>
-                                @csrf
-                                @method('PUT')
-                                <a href="{{ url('/adm/servicos/editar', $grupoServico->id) }}">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="{{ url('/adm/servicos/excluir', $grupoServico->id) }}">
-                                    <i class="fas fa-trash"></i>
-                                </a>
+                                <form action="{{ url('/adm/servicos/editar/grupo-servico', $grupoServico->id) }}" method="GET">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$grupoServico->id}}" />
+                                    <button type="submit"><i class="fas fa-edit"></i></i></button>
+                                </form>
+                                <form action="{{ url('/adm/servicos/excluir/grupo-servico', $grupoServico->id) }}" method="POST">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$grupoServico->id}}" />
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
@@ -69,7 +69,7 @@
                         {{ method_field('POST') }}
                         <div id="texto-login-cadastro" class="form-group col-md-12">
                             <label for="nome">Nome do Grupo de Serviços</label>
-                            <input type="text" name="nome" class="form-control login-cadastro-input" id="nome" placeholder="Escreva o nome do grupo de serviços">
+                            <input type="text" name="nome" class="form-control login-cadastro-input {{$errors->has('nome') ? ' is-invalid':''}}" id="nome" placeholder="Escreva o nome do grupo de serviços" value="{{ old('nome') }}">
                             <div class="invalid-feedback">{{ $errors->first('nome') }}</div>
                         </div>
                         <button type="submit" class="btn btn-primary ml-3" id="botao-login">Salvar</button>
@@ -103,36 +103,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @csrf
-                        @method('GET')
-                        @foreach(\App\Servico::all() as $servico)
+                        @foreach(App\Servico::all() as $servico)
                         <tr class="text-center">
                             <th scope="row">{{$servico->id}}</th>
                             <td>{{$servico->nome}}</td>
                             <td>{{$servico->descricao}}</td>
                             <td>
-                                @csrf
-                                @method('PUT')
-                                <a href="{{ url('/adm/servicos/editar', $servico->id) }}">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="{{ url('/adm/servicos/excluir', $servico->id) }}">
-                                    <i class="fas fa-trash"></i>
-                                </a>
+                                <form action="{{ url('/adm/servicos/editar/servico', $servico->id) }}" method="GET">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$servico->id}}" />
+                                    <button type="submit"><i class="fas fa-edit"></i></i></button>
+                                </form>
+                                <form action="{{ url('/adm/servicos/excluir/servico', $servico->id) }}" method="POST">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$servico->id}}" />
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
                     </tbody>
                 </table>
 
@@ -160,22 +151,22 @@
                         {{ method_field('POST') }}
                         <div id="texto-login-cadastro" class="form-group col-md-12">
                             <label for="nome">Nome do Serviço</label>
-                            <input type="text" name="nome" class="form-control login-cadastro-input" id="nome" placeholder="Escreva o nome do grupo de serviços">
+                            <input type="text" name="nome" class="form-control login-cadastro-input {{$errors->has('nome') ? ' is-invalid':''}}" id="nome" placeholder="Escreva o nome do grupo de serviços" value="{{ old('nome') }}">
                             <div class="invalid-feedback">{{ $errors->first('nome') }}</div>
                         </div>
                         <div id="texto-login-cadastro" class="form-group col-md-12">
                             <label for="descricao">Descrição do Serviço</label>
-                            <input type="text" name="descricao" class="form-control login-cadastro-input" id="descricao" placeholder="Descrição do grupo">
+                            <input type="text" name="descricao" class="form-control login-cadastro-input {{$errors->has('descricao') ? ' is-invalid':''}}" id="descricao" placeholder="Descrição do grupo" value="{{ old('descricao') }}">
                             <div class="invalid-feedback">{{ $errors->first('descricao') }}</div>
                         </div>
-                        <div id="texto-login-cadastro" class="form-group col-md-6">
+                        <!-- <div id="texto-login-cadastro" class="form-group col-md-6">
                             <label for="id_grupo_servicos">Grupo de Serviços</label>
                             <select id="id_grupo_servicos" name="id_grupo_servicos" class="form-control login-cadastro-input">
                                 <option selected>Grupo</option>
                                 <option value="nome"></option>
                             </select>
                             <div class="invalid-feedback">{{ $errors->first('id_grupo_servicos') }}</div>
-                        </div>
+                        </div> -->
                         <button type="submit" class="btn btn-primary ml-3" id="botao-login">Salvar</button>
                     </form>
                 </div>

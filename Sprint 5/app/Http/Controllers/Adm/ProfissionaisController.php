@@ -16,17 +16,18 @@ class ProfissionaisController extends Controller
     public function pesquisar(Request $request)
     {
         if (empty($request)) {
-            $profissional = Profissional::all();
-            return view('adm.profissionais', $profissional);
-            // retornar mensagem de profissional não encontrado
+            $profissionais = Profissional::all();
+            return view('adm.profissionais');
         } else {
-            $profissional = $request->input('nome');
-            // $profissional = $request->input('cpf');
+            $nome = $request->input('nome');
 
-            $nome_profissional = Profissional::where("nome", "=", "$profissional")->get();
-            // $cpf_profissional = Profissional::where("cpf", "=", "$profissional")->get();
+            $profissionais = Profissional::where("nome", "LIKE", "%$nome%")->get();
+            if(count($profissionais) <= 0){
+                $profissionais = Profissional::where("nome", "LIKE", "%$nome%")->get();
+            }
 
-            return view('adm.profissionais', $nome_profissional);
+            return view('adm.profissionais')->with('profissionais', $profissionais);
+            // return view('adm.profissionais')->with('nome', $nome);
         }
         return "Profissional não encontrado";
     }
@@ -38,29 +39,29 @@ class ProfissionaisController extends Controller
     
     public function criarProfissional(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|max:20',
-            'cpf' => 'required|min:11|max:11',
-            'rg' => 'max:10',
-            'data_de_nascimento' => 'required|max:8',
-            'foto' => 'max:500',
-            'tempo_na_ong' => 'required|max:20',
-            'resumo_historia' => 'required|max:200',
-            'cep' => 'required|min:8|max:8',
-            'logradouro' => 'required|max:50',
-            'numero' => 'required|max:10',
-            'complemento' => 'max:20',
-            'bairro' => 'required|max:20',
-            'cidade' => 'required|max:20',
-            'uf' => 'required|min:2|max:2',
-            'telefone' => 'min:8|max:10',
-            'celular' => 'min:9|max:11',
-            'email' => 'required|max:50',
-            'email' => 'required|max:50',
-            'id_ong' => 'required|max:10',
-            'id_grupo_servicos' => 'required|max:10',
-            'id_servico' => 'required|max:10'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:20',
+        //     'cpf' => 'required|min:11|max:11',
+        //     'rg' => 'max:10',
+        //     'data_de_nascimento' => 'required|max:8',
+        //     'foto' => 'max:500',
+        //     'tempo_na_ong' => 'required|max:20',
+        //     'resumo_historia' => 'required|max:200',
+        //     'cep' => 'required|min:8|max:8',
+        //     'logradouro' => 'required|max:50',
+        //     'numero' => 'required|max:10',
+        //     'complemento' => 'max:20',
+        //     'bairro' => 'required|max:20',
+        //     'cidade' => 'required|max:20',
+        //     'uf' => 'required|min:2|max:2',
+        //     'telefone' => 'min:8|max:10',
+        //     'celular' => 'min:9|max:11',
+        //     'email' => 'required|max:50',
+        //     'email' => 'required|max:50',
+        //     'id_ong' => 'required|max:10',
+        //     'id_grupoServicos' => 'required|max:10',
+        //     'id_servico' => 'required|max:10'
+        // ]);
 
         $profissional = Profissional::create([
             'nome' => $request->input('nome'),
@@ -80,9 +81,9 @@ class ProfissionaisController extends Controller
             'telefone' => $request->input('telefone'),
             'celular' => $request->input('celular'),
             'email' => $request->input('email'),
-            'id_ong' => $request->input('id_ong'),
-            'id_grupo_servicos' => $request->input('id_grupo_servicos'),
-            'id_servico' => $request->input('id_servico')
+            // 'id_ong' => $request->input('id_ong'),
+            // 'id_grupoServicos' => $request->input('id_grupoServicos')
+            // 'id_servico' => $request->input('id_servico')
         ]);
 
         return view('adm.profissionais')->with('profissional', $profissional);
@@ -91,14 +92,14 @@ class ProfissionaisController extends Controller
     public function editar($id)
     {
         $profissional = Profissional::find($id);
-        return view('adm.profissionais.editar')->with('profissional', $profissional);
+        return view('adm.editar-profissionais')->with('profissional', $profissional);
     }
 
     public function atualizar(Request $request, $id)
     {
         $profissional = Profissional::find($id);
 
-        $profissional->name = $request->input('nome');
+        $profissional->nome = $request->input('nome');
         $profissional->cpf = $request->input('cpf');
         $profissional->rg = $request->input('rg');
         $profissional->data_de_nascimento = $request->input('data_de_nascimento');
@@ -115,13 +116,13 @@ class ProfissionaisController extends Controller
         $profissional->telefone = $request->input('telefone');
         $profissional->celular = $request->input('celular');
         $profissional->email = $request->input('email');
-        $profissional->id_ong = $request->input('id_ong');
-        $profissional->id_grupo_servicos = $request->input('id_grupo_servicos');
-        $profissional->id_servico = $request->input('id_servico');
+        // $profissional->id_ong = $request->input('id_ong');
+        // $profissional->id_grupoServicos = $request->input('id_grupoServicos');
+        // $profissional->id_servico = $request->input('id_servico');
 
         $profissional->save();
 
-        return view('adm.profissionais');
+        return redirect('/adm/profissionais');
     }
 
     public function excluir($id)
@@ -129,6 +130,6 @@ class ProfissionaisController extends Controller
         $profissional = Profissional::find($id);
         $profissional->delete();
 
-        return view('adm.profissionais');
+        return redirect()->route('adm.profissionais.index')->with('alert-sucess', 'Profissional excluido com sucesso');
     }
 }

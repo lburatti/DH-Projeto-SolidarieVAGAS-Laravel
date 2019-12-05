@@ -10,25 +10,23 @@
             </div>
             <hr>
             <div class="panel-body px-3">
-                <div class="row">
-                    <div id="texto-login-cadastro" class="form-group col-md-6 my-3">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control busca" name="nome" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    </div>
-                    <!-- <div id="texto-login-cadastro" class="form-group col-md-6 my-3">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control busca" name="cpf" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    </div> -->
-                    <div class="form-group ml-auto px-3">
-                        <form action="{{ url('/adm/profissionais/pesquisar') }}" method="get">
-                        <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
-                            <!-- <a href="{{ url('/adm/profissionais/pesquisar') }}"></a> -->
-                            Buscar</button>
-                        </form>
-                        <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
-                            <a class="text-white text-decoration-none" href="{{ route('adm.cadastro-profissionais') }}">Cadastrar Profissional</a>
-                        </button>
-                    </div>
+                <div>
+                    <form action="{{ url('/adm/profissionais/pesquisar') }}" method="get" class="row">
+                        @csrf
+                        @method('GET')
+                        <div id="texto-login-cadastro" class="form-group col-12 my-3">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control busca" name="nome" value="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        </div>
+                        <div class="form-group col-12 ml-auto px-3">
+                            <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
+                                <!-- <a href="{{ url('/adm/profissionais/pesquisar') }}"></a> -->
+                                Buscar</button>
+                            <button type="submit" class="mb-1 btn btn-primary" id="botao-login">
+                                <a class="text-white text-decoration-none" href="{{ route('adm.cadastro-profissionais') }}">Cadastrar Profissional</a>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
     </article>
@@ -53,37 +51,45 @@
                             </th>
                             <th>Celular
                             </th>
-                            <th>Grupo de Serviços
-                            </th>
+                            <!-- <th>Grupo de Serviços
+                            </th> -->
                             <th>Ações
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        @csrf
-                        @method('GET')
-                        @foreach(\App\Profissional::all() as $profissional)
+                        @if($profissionais ?? '')
+                        @foreach($profissionais ?? '' as $profissional)
                         <tr class="text-center">
                             <th scope="row">{{$profissional->id}}</th>
                             <td>{{$profissional->nome}}</td>
                             <td>{{$profissional->cpf}}</td>
                             <td>{{$profissional->email}}</td>
                             <td>{{$profissional->celular}}</td>
-                            <td>{{$profissional->id_grupo_servico}}</td>
+                            <!-- <td>{{$profissional->id_grupoServicos}}</td> -->
                             <td>
-                                @csrf
-                                @method('PUT')
-                                <a href="{{ url('/adm/profissionais/editar', $profissional->id) }}">
+                                <form action="{{ url('/adm/profissionais/editar', $profissional->id) }}" method="GET">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$profissional->id}}" />
+                                    <button type="submit"><i class="fas fa-edit"></i></i></button>
+                                </form>
+                                <!-- <a href="{{ url('/adm/profissionais/editar', $profissional->id) }}">
                                     <i class="fas fa-edit"></i>
-                                </a>
-                                @csrf
-                                @method('DELETE')
-                                <a href="{{ url('/adm/profissionais/excluir', $profissional->id) }}">
+                                </a> -->
+                                <form action="{{ url('/adm/profissionais/excluir', $profissional->id) }}" method="POST">
+                                    @csrf
+                                    {{ method_field('POST') }}
+                                    <input type="hidden" name="id" value="{{$profissional->id}}" />
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
+                                <!-- <a href="{{ url('/adm/profissionais/excluir', $profissional->id) }}">
                                     <i class="fas fa-trash"></i>
-                                </a>
+                                </a> -->
                             </td>
                         </tr>
                         @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

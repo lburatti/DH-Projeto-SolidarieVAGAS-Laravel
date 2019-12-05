@@ -21,16 +21,16 @@ class ServicosController extends Controller
     
     public function criarServico(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|max:50',
-            'descricao' => 'max:100',
-            'id_grupo_servicos' => 'required'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:50',
+        //     'descricao' => 'max:100',
+        //     'id_grupo_servicos' => 'required'
+        // ]);
 
         $servico = Servico::create([
             'nome' => $request->input('nome'),
-            'descricao' => $request->input('descricao'),
-            'id_grupo_servicos' => $request->input('grupo_servicos->id')
+            'descricao' => $request->input('descricao')
+            // 'id_grupo_servicos' => $request->input('grupo_servicos->id')
         ]);
 
         return view('adm.servicos')->with('servico', $servico);
@@ -38,9 +38,9 @@ class ServicosController extends Controller
 
     public function criarGrupoServico(Request $request)
     {
-        $request->validate([
-            'nome' => 'required|max:50',
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:50',
+        // ]);
 
         $grupoServico = GrupoServicos::create([
             'nome' => $request->input('nome'),
@@ -49,49 +49,52 @@ class ServicosController extends Controller
         return view('adm.servicos')->with('grupoServico', $grupoServico);
     }
 
-    public function editar($id)
+    public function editarServico($id)
     {
         $servico = Servico::find($id);
-        return view('adm.servicos.editar')->with('servico', $servico);
-        
+        return view('adm.editar-servicos')->with('servico', $servico);
+    }
+
+    public function editarGrupoServico($id)
+    {
         $grupoServico = GrupoServicos::find($id);
-        return view('adm.servicos.editar')->with('grupoServico', $grupoServico);
+        return view('adm.editar-grupo-servicos')->with('grupoServico', $grupoServico);
     }
 
     public function atualizarServico(Request $request, $id)
     {
-        $request->validate([
-            'nome' => 'required|max:50',
-            'descricao' => 'max:100',
-            'id_grupo_servicos' => 'required'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:50',
+        //     'descricao' => 'max:100',
+        //     'id_grupo_servicos' => 'required'
+        // ]);
 
         $servico = Servico::find($id);
 
         $servico->nome = $request->input('nome');
         $servico->descricao = $request->input('descricao');
-        $servico->id_grupo_servicos = $request->input('id_grupo_servicos');
+        // $servico->id_grupo_servicos = $request->input('id_grupo_servicos');
 
         $servico->save();
 
-        return view('/adm/servicos');
+        return redirect('/adm/servicos');
     }
 
     public function atualizarGrupoServico(Request $request, $id)
     {
-        $request->validate([
-            'nome' => 'required|max:50',
-            'id_servicos' => 'required'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:50',
+        //     'id_servicos' => 'required'
+        // ]);
 
         $grupoServico = GrupoServicos::find($id);
 
         $grupoServico->nome = $request->input('nome');
-        $grupoServico->id_servicos = $request->input('id_servicos');
+        // $grupoServico->id_servicos = $request->input('id_servicos');
 
         $grupoServico->save();
 
-        return redirect('/adm/servicos' . $grupoServico->id);
+        return redirect('/adm/servicos');
     }
 
     public function excluirServico($id)
@@ -99,7 +102,7 @@ class ServicosController extends Controller
         $servico = Servico::find($id);
         $servico->delete();
 
-		return view('/adm/servicos');
+        return redirect()->route('adm.servicos.index')->with('alert-sucess', 'Serviço excluido com sucesso');
     }
 
     public function excluirGrupoServico($id)
@@ -107,6 +110,6 @@ class ServicosController extends Controller
         $grupoServico = GrupoServicos::find($id);
         $grupoServico->delete();
 
-		return view('/adm/servicos');
+		return redirect()->route('adm.servicos.index')->with('alert-sucess', 'Grupo de serviços excluido com sucesso');
     }
 }

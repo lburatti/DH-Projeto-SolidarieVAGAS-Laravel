@@ -18,7 +18,7 @@ class NiveisAcessoController extends Controller
         return view('adm.niveis-acesso.criar');
     }
     
-    public function criarNivelAcesso(Request $request)
+    public function criarNovo(Request $request)
     {
         $request->validate([
             'nome' => 'required|max:20'
@@ -34,14 +34,14 @@ class NiveisAcessoController extends Controller
     public function editar($id)
     {
         $nivelAcesso = NivelAcesso::find($id);
-        return view('adm.niveis-acesso.editar')->with('nivelAcesso', $nivelAcesso);
+        return view('adm.editar-niveis-acesso')->with('nivelAcesso', $nivelAcesso);
     }
 
-    public function atualizarServico(Request $request, $id)
+    public function atualizar(Request $request, $id)
     {
-        $request->validate([
-            'nome' => 'required|max:20'
-        ]);
+        // $request->validate([
+        //     'nome' => 'required|max:20'
+        // ]);
 
         $nivelAcesso = NivelAcesso::find($id);
 
@@ -49,14 +49,14 @@ class NiveisAcessoController extends Controller
 
         $nivelAcesso->save();
 
-        return view('adm.niveis-acesso');
+        return redirect('/adm/niveis-acesso');
     }
 
-    public function excluirNivelAcesso($id)
+    public function excluir($id)
     {
         $nivelAcesso = NivelAcesso::find($id);
         $nivelAcesso->delete();
 
-		return view('adm.niveis-acesso');
+		return redirect()->route('adm.niveis-acesso.index')->with('alert-sucess', 'Nivel de Acesso excluido com sucesso');
     }
 }
