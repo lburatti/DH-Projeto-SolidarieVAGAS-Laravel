@@ -10,7 +10,7 @@ class AddDiversosToProfissionaisTable extends Migration
     {
         Schema::table('profissionais', function (Blueprint $table) {
             $table->unsignedBigInteger('id_ong')->nullable();
-            $table->foreign('id_ong')->references('id')->on('ongs');
+            $table->foreign('id_ong')->references('id')->on('users');
             $table->unsignedBigInteger('id_grupoServicos')->nullable();
             $table->foreign('id_grupoServicos')->references('id')->on('grupos_servicos');
             $table->unsignedBigInteger('id_servico')->nullable();

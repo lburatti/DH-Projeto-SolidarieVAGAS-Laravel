@@ -16,9 +16,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password'
+        // 'name', 'email', 'password'
         // 'name', 'email', 'password', 'id_ong', 'id_contratante', 'nivel_acesso'
+        "nivel_acesso", "name", "cpf", "cnpj", "data_de_nascimento", "data_de_inicio", "finalidade_ong", "logo", "sobre_ong", "cep", "logradouro", "numero", "complemento", "bairro", "cidade", "uf", "telefone", "celular", "site_ong", "email", "password", "nome_responsavel", "cpf_responsavel", "funcao_responsavel", "celular_responsavel", "email_responsavel"
     ];
+
+    public function getLogoImageAttribute($logo) {
+        return $this->logo == null ? asset('img/null.jpg') : asset($this->logo);
+    }
 
     /**
      * The attributes that should be hidden for arrays.

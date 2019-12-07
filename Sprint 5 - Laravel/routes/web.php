@@ -20,7 +20,7 @@ Route::get('/cadastro', function () {
     return view('/auth/register');
 })->name('cadastro');
 // criar
-Route::post('/adm/cadastro/criar', 'Auth\RegisterController@create')->name('cadastro.criar');
+Route::post('/cadastro/criar', 'Auth\RegisterController@create')->name('cadastro.criar');
 
 //LOGIN
 Route::post('/login', function () {
