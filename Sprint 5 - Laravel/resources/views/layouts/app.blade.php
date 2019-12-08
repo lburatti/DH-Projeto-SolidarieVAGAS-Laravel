@@ -1,4 +1,4 @@
-<!doctype html>
+ {{-- <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="app">
-    {{-- <header class="container-fluid p-0 m-0"> --}}
+    
         <nav class="navbar fixed-top navbar-expand-lg navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -31,15 +31,12 @@
                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span ><img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3"></span>
                 </button> 
-                    {{-- <button class="navbar-brand my-auto" href="{{ sroute('welcome') }}">
-                        <img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
-                    </button> --}}
+                   
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -56,11 +53,11 @@
                             <li class="nav-item">
                                 <a class="nav-link " style="color:#FF6347" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            {{-- @if (Route::has('register'))
+                            @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" style="color:#FF6347" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif --}}
+                            @endif
                         @else
                             <li class="nav-item mx-1">
                                 <a class="nav-link" style="color:#FF6347" href="{{ route('adm.usuarios.index') }}">Usuários(1)</a>
@@ -111,8 +108,141 @@
         </main>
     </div>
 </body>
-</html>
+</html>   --}}
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- ADOBE -->
+    <link rel="stylesheet" href="https://use.typekit.net/bbn7xbn.css">
+
+    <!-- LINK FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- HEADER -->
+        <header class="container-fluid p-0 m-0" id="adm">
+            <nav class="navbar fixed-top navbar-expand-lg">
+
+                    <a class="navbar-brand my-auto" href="{{ route('welcome') }}">
+                            <img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
+                            SolidarieVAGAS
+                    </a>
+               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+                    
+                    </ul>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('busca.index') }}" title="Busca">Buscas</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('servicos') }}">Serviços</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('cadastro') }}">Cadastros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " style="color:#FF6347" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @else
+                       
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.usuarios.index') }}">Usuários(1)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.niveis-acesso.index') }}">Níveis de acesso(1)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.servicos.index') }}">Serviços(1)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro') }}">Meu cadastro(2,3)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.profissionais.index') }}">Profissionais(2)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-recebidos.index') }}">Pedidos Recebidos(2)</a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-enviados.index') }}">Pedidos enviados(3)</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" style="color:#FF6347" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+
+        <footer class="container-fluid d-flex flex-column justify-content-center m-0 p-0">
+            <div>
+                <h1 class="py-1 my-0">SolidarieVAGAS</h1>
+                <p class="py-1 my-0">e-mail@e-mail.com.br</p>
+                <p class="py-1 my-0">Telefone: (11) 0000-0000</p>
+            </div>
+            <div class="my-1 py-1">
+                <a href="" title="Facebook">
+                    <i class="fab fa-facebook-square mx-1"></i>
+                </a>
+                <a href="" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter-square mx-1"></i>
+                </a>
+                <a href="" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin mx-1"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html> 
 
 {{-- <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

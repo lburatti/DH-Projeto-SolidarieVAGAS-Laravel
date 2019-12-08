@@ -33,7 +33,7 @@
         <!-- HEADER -->
         <header class="container-fluid p-0 m-0" id="adm">
             <nav class="navbar fixed-top navbar-expand-lg">
-                <a class="navbar-brand my-auto" href="home.php">
+                <a class="navbar-brand my-auto" href="home">
                     <img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
                     SolidarieVAGAS
                 </a>
