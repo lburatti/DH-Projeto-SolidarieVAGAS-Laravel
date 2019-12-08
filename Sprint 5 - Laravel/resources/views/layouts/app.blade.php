@@ -70,14 +70,14 @@
                          </li>
                          @elseif(Auth::user()->nivel_acesso == 2)
                          <li class="nav-item mx-1">
-                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro') }}">Meu cadastro</a>
+                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro.index') }}">Meu cadastro</a>
                          </li>
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.pedidos-recebidos.index') }}">Pedidos Recebidos</a>
                          </li>
                          @elseif(Auth::user()->nivel_acesso == 3)
                          <li class="nav-item mx-1">
-                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro') }}">Meu cadastro</a>
+                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro.index') }}">Meu cadastro</a>
                          </li>
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.profissionais.index') }}">Profissionais</a>

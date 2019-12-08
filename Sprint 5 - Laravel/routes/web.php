@@ -76,9 +76,10 @@ Route::post('/adm/servicos/excluir/servico/{id}', 'Adm\ServicosController@exclui
 Route::post('/adm/servicos/excluir/grupo-servico/{id}', 'Adm\ServicosController@excluirGrupoServico')->name('adm.servicos.excluirGrupoServico');
 
 //MEU CADASTRO
-Route::get('/adm/meu-cadastro', function () {
-    return view('adm.meu-cadastro');
-})->name('adm.meu-cadastro');
+Route::get('/adm/meu-cadastro', 'Adm\MeuCadastroController@index')->name('adm.meu-cadastro.index');
+// editar
+Route::get('/adm/meu-cadastro/editar/{id}', 'Adm\MeuCadastroController@editar')->name('adm.meu-cadastro.editar');
+Route::put('/adm/meu-cadastro/editar/{id}', 'Adm\MeuCadastroController@atualizar')->name('adm.meu-cadastro.atualizar');
 
 //PROFISSIONAIS
 Route::get('/adm/profissionais', 'Adm\ProfissionaisController@index')->name('adm.profissionais.index');
@@ -98,6 +99,9 @@ Route::post('/adm/profissionais/excluir/{id}', 'Adm\ProfissionaisController@excl
 Route::get('/adm/pedidos-recebidos', 'Adm\PedidosRecebidosController@index')->name('adm.pedidos-recebidos.index');
 // pesquisar
 Route::get('/adm/pedidos-recebidos/pesquisar', 'Adm\PedidosRecebidosController@pesquisar')->name('adm.pedidos-recebidos.pesquisar');
+// criar
+Route::get('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criar')->name('adm.pedidos-recebidos.criar');
+Route::post('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criarNovo')->name('adm.pedidos-recebidos.criarNovo');
 
 //PEDIDOS ENVIADOS
 Route::get('/adm/pedidos-enviados', 'Adm\PedidosEnviadosController@index')->name('adm.pedidos-enviados.index');
