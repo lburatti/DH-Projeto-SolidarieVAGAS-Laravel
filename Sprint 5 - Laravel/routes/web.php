@@ -75,6 +75,12 @@ Route::put('/adm/servicos/editar/grupo-servico/{id}', 'Adm\ServicosController@at
 Route::post('/adm/servicos/excluir/servico/{id}', 'Adm\ServicosController@excluirServico')->name('adm.servicos.excluirServico');
 Route::post('/adm/servicos/excluir/grupo-servico/{id}', 'Adm\ServicosController@excluirGrupoServico')->name('adm.servicos.excluirGrupoServico');
 
+// CADASTRO ADMIN
+Route::get('/adm/cadastro-admin', 'Adm\CadastroAdminController@index')->name('adm.cadastro-admin.index');
+// criar
+Route::get('/adm/cadastro-admin/criar', 'Adm\CadastroAdminController@criar')->name('adm.cadastro-admin.criar');
+Route::post('/adm/cadastro-admin/criar', 'Adm\CadastroAdminController@criarNovo')->name('adm.cadastro-admin.criarNovo');
+
 //MEU CADASTRO
 Route::get('/adm/meu-cadastro', 'Adm\MeuCadastroController@index')->name('adm.meu-cadastro.index');
 // editar

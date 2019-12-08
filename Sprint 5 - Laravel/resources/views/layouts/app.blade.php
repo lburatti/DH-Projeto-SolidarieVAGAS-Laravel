@@ -68,6 +68,9 @@
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.servicos.index') }}">Serviços</a>
                          </li>
+                         <li class="nav-item mx-1">
+                             <a class="nav-link" style="color:#FF6347" href="{{ route('adm.cadastro-admin.index') }}">Cadastro de Admin</a>
+                         </li>
                          @elseif(Auth::user()->nivel_acesso == 2)
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro.index') }}">Meu cadastro</a>

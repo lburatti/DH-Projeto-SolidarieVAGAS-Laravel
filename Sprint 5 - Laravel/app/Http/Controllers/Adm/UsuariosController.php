@@ -18,17 +18,18 @@ class UsuariosController extends Controller
     {
         if (empty($request)) {
             $usuarios = User::all();
-            return view('adm.usuarios', $usuarios);
+            return view('adm.usuarios');
         } else {
             $nome = $request->input('name');
             // $nivelAcesso = $request->input('nivel_acesso');
 
             $usuarios = User::where("name", "LIKE", "%$nome%")->get();
             if(count($usuarios) <= 0){
-                $usuarios = User::where("name", "LIKE", "%$nome%")->get();
+                $usuarios = User::get();
             }
             return view('adm.usuarios')->with('usuarios', $usuarios);
         }
+        return "Usuario não encontrado";
     }
 
     // public function editar($id)
