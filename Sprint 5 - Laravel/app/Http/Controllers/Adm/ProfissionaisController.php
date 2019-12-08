@@ -37,7 +37,7 @@ class ProfissionaisController extends Controller
         return view('adm.profissionais.criar');
     }
     
-    public function criarProfissional(Request $request)
+    public function criarNovo(Request $request)
     {
         // $request->validate([
         //     'nome' => 'required|max:20',

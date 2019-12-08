@@ -7,13 +7,13 @@ class NiveisAcessoTableSeeder extends Seeder
 {
     public function run()
     {
-        for($i=1; $i < 4; $i++) {
-            $nivelAcesso = new NivelAcesso();
+        // $admin = new NivelAcesso;
+        // $admin->nome = 'Admin';
 
-            $nivelAcesso->nome = 'Nivel '.$i;
+        // $contratante = new NivelAcesso;
+        // $contratante->nome = 'Contratante';
 
-            $nivelAcesso->save();
-
-        }
+        // $ong = new NivelAcesso;
+        // $ong->nome = 'ONG';
     }
 }

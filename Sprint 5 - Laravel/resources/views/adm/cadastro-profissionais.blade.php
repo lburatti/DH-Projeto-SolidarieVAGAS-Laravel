@@ -9,7 +9,7 @@
     <!-- BUSCA DE PROFISSIONAIS CADASTRADOS / CADASTRAR NOVO PROFISSIONAL -->
     <div class="mx-auto cadastros">
         <div class="card-body">
-            <form action="{{ url('/adm/pedidos-enviados/criar') }}" method="POST" class="form-row" enctype="multipart/form-data">
+            <form action="{{ url('/adm/profissionais/criar') }}" method="POST" class="form-row" enctype="multipart/form-data">
                 @csrf
                 {{ method_field('POST') }}
                 <div class="form-row formulario">
@@ -130,6 +130,10 @@
                             <option value="5">Informática</option>
                             <option value="6">Jardinagem</option>
                         </select>
+                    </div>
+                    <div id="texto-login-cadastro" class="form-group col-md-12">
+                        <label for="id_servico">Serviço</label>
+                        <input type="text" name="id_servico" class="form-control login-cadastro-input {{$errors->has('id_servico') ? ' is-invalid':''}}" id="id_servico" placeholder="" value="{{ old('id_servico') }}">
                     </div>
                     <!-- FALTA PARTE PARA ADICIONAR SERVIÇOS PRESTADOS                          -->
                 </div>

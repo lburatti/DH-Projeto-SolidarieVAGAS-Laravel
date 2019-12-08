@@ -15,22 +15,18 @@ class BuscaController extends Controller
 
     public function pesquisar(Request $request)
     {
-        $servico = $request->input('servico');
+        if (empty($request)) {
+            $profissinais = Profissional::all();
+            return view('busca', $profissinais);
+        } else {
+            $servico = $request->input('servico');
+            // $nivelAcesso = $request->input('nivel_acesso');
 
-        $id_servico = Servico::where("nome", "like", "%$servico%")->get("id");
-
-        if (isset($id_servico)) {
-            return $id_servico;
+            $profissinais = Profissional::where("id_servico", "LIKE", "%$servico%")->get()->appends('id_servico' , request('servico'));
+            if(count($profissinais) <= 0){
+                $profissinais = Profissional::where("id_servico", "LIKE", "%$servico%")->get()->appends('id_servico' , request('servico'));
+            }
+            return view('busca')->with('profissionais', $profissinais);
         }
-        return view('busca');
-    }
-
-    public function retornar($id_servico) 
-    {
-        // $profissionais = Profissional::find($id_servico);
-        $profissionais = Profissional::where("id_servico", "=", $id_servico)->get();
-
-        return view('busca')->with('profissionais', $profissionais);
-
     }
 }

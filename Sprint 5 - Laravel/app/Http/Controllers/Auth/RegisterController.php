@@ -67,7 +67,7 @@ class RegisterController extends Controller
             'nivel_acesso'=> $data['nivel_acesso'],
             'name' => $data['name'],
             'cpf_cnpj' => $data['cpf_cnpj'],
-            'data_de_nascimento' => $data['data_de_nascimento'],
+            'data_de_nasc_inicio' => $data['data_de_nasc_inicio'],
             'cep' => $data['cep'],
             'logradouro' => $data['logradouro'],
             'numero' => $data['numero'],

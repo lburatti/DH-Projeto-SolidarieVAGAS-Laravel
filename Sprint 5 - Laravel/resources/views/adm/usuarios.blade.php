@@ -16,6 +16,7 @@
                         @csrf
                         @method('GET')
                         <div id="texto-login-cadastro" class="form-group col-12">
+                            {{ $profissionais->appends([])->links() }}
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control login-cadastro-input" aria-label="Recipient's username" name="name" aria-describedby="button-addon2">
                         </div>
@@ -31,6 +32,7 @@
                         <div class="form-group ml-auto px-3 col-12">
                             <button type="submit" class="mb-1 btn btn-primary" id="botao-login">Buscar</button>
                         </div>
+                    </form>
                 </div>
             </div>
     </article>

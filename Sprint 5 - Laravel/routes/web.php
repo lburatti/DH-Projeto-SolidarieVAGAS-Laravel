@@ -7,8 +7,8 @@ Route::get('/', function () {
 
 //BUSCAS
 Route::get('/busca', 'BuscaController@index')->name('busca.index');
-Route::post('/busca/{servico}', 'BuscaController@pesquisar')->name('busca.pesquisar');
-Route::get('/busca/{id}', 'BuscaController@retornar')->name('busca.retornar');
+// pesquisar
+Route::post('/busca/pesquisar', 'BuscaController@pesquisar')->name('busca.pesquisar');
 
 //SERVICOS
 Route::get('/servicos', function () {
@@ -22,10 +22,13 @@ Route::get('/cadastro', function () {
 // criar
 Route::post('/cadastro/criar', 'Auth\RegisterController@create')->name('cadastro.criar');
 
-//LOGIN
+//LOGIN e LOGOUT
 Route::post('/login', function () {
     return view('/adm/home');
 })->name('login');
+Route::get('/logout', function () {
+    return view('welcome');
+})->name('logout');
 
 
 
