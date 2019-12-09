@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Servico;
 use App\Profissional;
+use App\Http\Controllers\Controller;
 
 class BuscaController extends Controller
 {
@@ -16,17 +16,18 @@ class BuscaController extends Controller
     public function pesquisar(Request $request)
     {
         if (empty($request)) {
-            $profissinais = Profissional::all();
-            return view('busca', $profissinais);
+            $profissionais = Profissional::all();
+            return view('busca');
         } else {
             $servico = $request->input('servico');
-            // $nivelAcesso = $request->input('nivel_acesso');
 
-            $profissinais = Profissional::where("id_servico", "LIKE", "%$servico%")->get()->appends('id_servico' , request('servico'));
-            if(count($profissinais) <= 0){
-                $profissinais = Profissional::where("id_servico", "LIKE", "%$servico%")->get()->appends('id_servico' , request('servico'));
+            $profissionais = Profissional::where("id_servico", "=", "$servico")->get();
+            if(count($profissionais) <= 0){
+                $profissionais = Profissional::get();
             }
-            return view('busca')->with('profissionais', $profissinais);
+
+            return view('busca')->with('profissionais', $profissionais);
         }
+        return "Profissional não encontrado";
     }
 }

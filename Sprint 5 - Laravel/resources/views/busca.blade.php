@@ -7,9 +7,9 @@
     <article>
         <p class="lead text-center vagas pt-3">Encontre um profissional para realizar o serviço que você procura:</p>
         <div class="input-group my-3 d-flex">
-            <form class="form-inline" action="{{ url('/busca/pesquisar') }}" method="POST">
+            <form class="form-inline" action="{{ url('/busca/pesquisar') }}" method="get">
                 @csrf
-                @method('POST')
+                @method('GET')
                 <div id="texto-login-cadastro" class="form-group col-12">
                     <input type="text" class="form-control busca" name="servico" placeholder="Escreva aqui o que você está procurando..." aria-label="Recipient's username" aria-describedby="button-addon2">
                 </div>
@@ -25,9 +25,9 @@
 <section class="container mx-auto" id="resultadoBusca">
     <!-- @isset($profissionais) -->
     <article class="row mt-2 mb-5 p-0 text-center">
+        @if($profissionais ?? '')
+        @foreach($profissionais ?? '' as $profissional)
         <div class="col-12 col-md-6 resultado-busca d-flex row mr-4">
-            @if($profissionais ?? '')
-            @foreach($profissionais ?? '' as $profissional)
             <div class="col-12 col-md-6">
                 <img src="{{ $profissional->foto }}" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
             </div>
@@ -39,13 +39,11 @@
                 <button type="button" class="btn btn-sm mb-2 text-white" data-toggle="modal" id="modalSolicitarOrcamento" data-target="#exampleModalLabel">Solicitar Orçamento
                 </button>
             </div>
-            @endforeach
-            @endif
             <div class="d-flex justify-content-center mt-4">
-            {{ $profissionais->appends(['id_servico' => isset($servico) ? $servico : ''])->links() }}
-        </div>
-        </div>
-        
+            </div>
+        </div>  
+        @endforeach
+        @endif
     </article>
     <!-- @endisset -->
 </section>

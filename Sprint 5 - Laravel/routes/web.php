@@ -8,7 +8,7 @@ Route::get('/', function () {
 //BUSCAS
 Route::get('/busca', 'BuscaController@index')->name('busca.index');
 // pesquisar
-Route::post('/busca/pesquisar', 'BuscaController@pesquisar')->name('busca.pesquisar');
+Route::get('/busca/pesquisar', 'BuscaController@pesquisar')->name('busca.pesquisar');
 
 //SERVICOS
 Route::get('/servicos', function () {
