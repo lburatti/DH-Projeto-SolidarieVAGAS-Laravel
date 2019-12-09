@@ -5,32 +5,17 @@ namespace App\Http\Controllers\Adm;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\PedidoOrcamento;
+use Illuminate\Support\Facades\Auth;
 
 class PedidosRecebidosController extends Controller
 {
     public function index()
     {
-        return view('adm.pedidos-recebidos');
-    }
+        $userId = Auth::id();
 
-    public function pesquisar(Request $request)
-    {
-        if (empty($request)) {
-            $pedidosRecebidos = PedidoOrcamento::all();
-            return view('adm.pedidos-recebidos');
-        } else {
-            $periodoDe = $request->input(date('periodoDe' . '00:00:00', time()));
-            $periodoAte = $request->input(date('periodoAte' . '00:00:00', time()));
+        $pedidosRecebidos = PedidoOrcamento::where("id_user_ong", "=", $userId)->get();
 
-            $pedidosRecebidos = PedidoOrcamento::whereBetween('created_at', array($periodoDe, $periodoAte))->get();
-            
-            if(count($pedidosRecebidos) <= 0){
-                $pedidosRecebidos = PedidoOrcamento::get();
-            }
-
-            return view('adm.pedidos-recebidos')->with('pedidos-recebidos', $pedidosRecebidos);
-        }
-        return "Pedido não encontrado";
+        return view('adm.pedidos-recebidos')->with('pedidosRecebidos', $pedidosRecebidos);
     }
 
     public function criar()

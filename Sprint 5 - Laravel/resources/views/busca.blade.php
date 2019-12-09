@@ -6,14 +6,14 @@
 <section class="container mx-auto my-5 pt-5" id="busca">
     <article>
         <p class="lead text-center vagas pt-3">Encontre um profissional para realizar o serviço que você procura:</p>
-        <div class="input-group my-3 d-flex">
-            <form class="form-inline" action="{{ url('/busca/pesquisar') }}" method="get">
+        <div class="input-group my-3 d-flex row">
+            <form class="col-12" action="{{ url('/busca/pesquisar') }}" method="get">
                 @csrf
                 @method('GET')
-                <div id="texto-login-cadastro" class="form-group col-12">
-                    <input type="text" class="form-control busca" name="servico" placeholder="Escreva aqui o que você está procurando..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div id="texto-login-cadastro" class="form-group col-12 my-3">
+                    <input type="text" class="form-control busca" name="servico" value="" placeholder="Escreva aqui o que você está procurando..." aria-label="Recipient's username" aria-describedby="button-addon2">
                 </div>
-                <div class="form-group ml-auto px-3 col-12">
+                <div class="form-group col-12 ml-auto px-3">
                     <button type="submit" class="mb-1 btn btn-primary" id="botao-login">Buscar</button>
                 </div>
             </form>
@@ -27,7 +27,7 @@
     <article class="row mt-2 mb-5 p-0 text-center">
         @if($profissionais ?? '')
         @foreach($profissionais ?? '' as $profissional)
-        <div class="col-12 col-md-6 resultado-busca d-flex row mr-4">
+        <div class="col-12 col-md-6 resultado-busca d-flex row mr-2 mb-1">
             <div class="col-12 col-md-6">
                 <img src="{{ $profissional->foto }}" class="my-3 mx-auto img-fluid" alt="Profissional 1" width="100%" height="">
             </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="d-flex justify-content-center mt-4">
             </div>
-        </div>  
+        </div>
         @endforeach
         @endif
     </article>

@@ -2,33 +2,6 @@
 
 @section('content')
 <section class="container my-3 py-5" id="adm">
-    <!-- BUSCA DE PROFISSIONAIS CADASTRADOS / CADASTRAR NOVO PROFISSIONAL -->
-    <article class="mt-5 px-0">
-        <div class="panel p-3">
-            <div class="panel-heading">
-                Busca de Pedidos Recebidos
-            </div>
-            <hr>
-            <div class="panel-body px-3">
-                <div>
-                    <form action="{{ url('/adm/pedidos-recebidos/pesquisar') }}" method="GET" class="row">
-                        @csrf
-                        @method('GET')
-                        <div id="texto-login-cadastro" class="form-group col-md-6">
-                            <label for="periodoDe">Período de:</label>
-                            <input type="date" name="periodoDe" class="form-control login-cadastro-input" value="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        </div>
-                        <div id="texto-login-cadastro" class="form-group col-md-6">
-                            <label for="periodoAte">Até:</label>
-                            <input type="date" name="periodoAte" class="form-control login-cadastro-input" value="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        </div>
-                        <div class="form-group ml-auto px-3">
-                            <button type="submit" class="mb-1 btn btn-primary" id="botao-login">Buscar</button>
-                        </div>
-                </div>
-            </div>
-    </article>
-    <!-- RESULTADO BUSCA -->
     <article class="mt-5 px-0">
         <div class="panel p-3">
             <div class="panel-heading">
@@ -62,9 +35,6 @@
                             <th scope="row">{{$pedidoRecebido->id}}</th>
                             <td>{{$pedidoRecebido->descricao}}</td>
                             <td>{{$pedidoRecebido->quantidade}}</td>
-                            <!-- <td>{{$pedidoEnviado->id_user_contratante || $pedidoEnviado->id_user_ong}}</td>
-                            <td>{{$pedidoEnviado->id_profissional}}</td>
-                            <td>{{$pedidoEnviado->id_servico}}</td> -->
                             <td>{{$pedidoRecebido->created_at}}</td>
                         </tr>
                         @endforeach

@@ -103,16 +103,12 @@ Route::post('/adm/profissionais/excluir/{id}', 'Adm\ProfissionaisController@excl
 
 //PEDIDOS RECEBIDOS
 Route::get('/adm/pedidos-recebidos', 'Adm\PedidosRecebidosController@index')->name('adm.pedidos-recebidos.index');
-// pesquisar
-Route::get('/adm/pedidos-recebidos/pesquisar', 'Adm\PedidosRecebidosController@pesquisar')->name('adm.pedidos-recebidos.pesquisar');
 // criar
 Route::get('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criar')->name('adm.pedidos-recebidos.criar');
 Route::post('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criarNovo')->name('adm.pedidos-recebidos.criarNovo');
 
 //PEDIDOS ENVIADOS
 Route::get('/adm/pedidos-enviados', 'Adm\PedidosEnviadosController@index')->name('adm.pedidos-enviados.index');
-// pesquisar
-Route::get('/adm/pedidos-enviados/pesquisar', 'Adm\PedidosEnviadosController@pesquisar')->name('adm.pedidos-enviados.pesquisar');
 // criar
 Route::get('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criar')->name('adm.pedidos-enviados.criar');
 Route::post('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criarNovo')->name('adm.pedidos-enviados.criarNovo');
