@@ -23,11 +23,11 @@
             <h5 class="card-title card-vagas"><i class="fas fa-tools mr-3"></i>CONSTRUÇÃO E REFORMA</h5>
             <hr>
             <ul>
-              <li>Pequenos ajustes</li>
-              <li>Barra de calças</li>
-              <li>Vestidos para casamento</li>
-              <li>Bordado, crochê e tricô</li>
-              <li>Roupas novas</li>
+              <li>Reparos elétricos</li>
+              <li>Reparos hidráulicos</li>
+              <li>Interior de imóveis</li>
+              <li>Pinturas</li>
+              <li>Marcenaria</li>
             </ul>
           </div>
         </div>
@@ -38,11 +38,11 @@
             <h5 class="card-title card-vagas"><i class="fas fa-hands mr-3"></i>ARTESANATO</h5>
             <hr>
             <ul>
-              <li>Pequenos ajustes</li>
-              <li>Barra de calças</li>
-              <li>Vestidos para casamento</li>
-              <li>Bordado, crochê e tricô</li>
-              <li>Roupas novas</li>
+              <li>Presentes artesanais</li>
+              <li>Artigos personalizados</li>
+
+              <li>Brindes para eventos</li>
+             
             </ul>
           </div>
         </div>
@@ -51,11 +51,11 @@
             <h5 class="card-title card-vagas"><i class="fas fa-utensils mr-3"></i>COZINHA</h5>
             <hr>
             <ul>
-              <li>Pequenos ajustes</li>
-              <li>Barra de calças</li>
-              <li>Vestidos para casamento</li>
-              <li>Bordado, crochê e tricô</li>
-              <li>Roupas novas</li>
+              <li>Pizzas</li>
+              <li>Pão de Queijo artesanal</li>
+              <li>Doces para festas</li>
+              <li>Marmitas</li>
+              <li>Salgadinhos para festas</li>
             </ul>
           </div>
         </div>
@@ -66,24 +66,23 @@
             <h5 class="card-title card-vagas"><i class="fas fa-laptop-code mr-3"></i>INFORMÁTICA</h5>
             <hr>
             <ul>
-              <li>Pequenos ajustes</li>
-              <li>Barra de calças</li>
-              <li>Vestidos para casamento</li>
-              <li>Bordado, crochê e tricô</li>
-              <li>Roupas novas</li>
+              <li>Hardware</li>
+              <li>Sistemas (software)</li>
+              <li>Manutençao de Sistema</li>
+              <li>Websites e Aplicativos</li>
+              <li>Instalação de Sistemas</li>
             </ul>
           </div>
         </div>
         <div class="card col-md-12 col-lg-6 grupos-servicos mx-1 my-1">
           <div class="card-body text-center">
-            <h5 class="card-title card-vagas"><i class="fab fa-envira mr-3"></i>JARDINAGEM</h5>
+            <h5 class="card-title card-vagas"><i class="fab fa-envira mr-3"></i>SERVIÇOS EXTERNOS</h5>
             <hr>
             <ul>
-              <li>Pequenos ajustes</li>
-              <li>Barra de calças</li>
-              <li>Vestidos para casamento</li>
-              <li>Bordado, crochê e tricô</li>
-              <li>Roupas novas</li>
+              <li>Jardinagem</li>
+              <li>Manutenção de piscinas</li>
+              <li>Limpeza de áreas externas</li>
+              <li>Serviço de Mudança</li>
             </ul>
           </div>
         </div>

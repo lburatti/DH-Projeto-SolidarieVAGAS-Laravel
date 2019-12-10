@@ -31,15 +31,19 @@
  <body>
      <div id="app">
          <!-- HEADER -->
-         <header class="container-fluid p-0 m-0" id="adm">
+         <header class="container-fluid p-0 m-0" >
              <nav class="navbar fixed-top navbar-expand-lg">
 
                  <a class="navbar-brand my-auto" href="{{ route('welcome') }}">
                      <img src="/img/logo.png" alt="Logo" height="60" width="90" class="mr-3">
                      SolidarieVAGAS
                  </a>
+                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                 <i class="fas fa-bars"></i>
+             </button>
 
-                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <div class="collapse navbar-collapse" id="navbarNav">
                      <!-- Right Side Of Navbar -->
                      <ul class="navbar-nav ml-auto">
                          <!-- Authentication Links -->
@@ -68,9 +72,9 @@
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.servicos.index') }}">Serviços</a>
                          </li>
-                         <li class="nav-item mx-1">
+                         {{-- <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.cadastro-admin.index') }}">Cadastro de Admin</a>
-                         </li>
+                         </li> --}}
                          @elseif(Auth::user()->nivel_acesso == 2)
                          <li class="nav-item mx-1">
                              <a class="nav-link" style="color:#FF6347" href="{{ route('adm.meu-cadastro.index') }}">Meu cadastro</a>
