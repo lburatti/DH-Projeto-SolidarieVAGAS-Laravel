@@ -18,27 +18,27 @@ class PedidosEnviadosController extends Controller
         return view('adm.pedidos-enviados')->with('pedidosEnviados', $pedidosEnviados);
     }
 
-    public function criar()
-    {
-        return view('busca');
-    }
+    // public function criar()
+    // {
+    //     return view('busca');
+    // }
 
-    public function criarNovo(Request $request)
-    {
-        // $request->validate([
-        //     'descricao' => 'required|max:500',
-        //     'quantidade' => 'required|max:50'
-        // ]);
+    // public function criarNovo(Request $request)
+    // {
+    //     // $request->validate([
+    //     //     'descricao' => 'required|max:500',
+    //     //     'quantidade' => 'required|max:50'
+    //     // ]);
 
-        $pedidoEnviado = PedidoOrcamento::create([
-            'descricao' => $request->input('descricao'),
-            'quantidade' => $request->input('quantidade'),
-            // 'id_user_contratante' => $request->input('id_user_contratante'),
-            // 'id_user_ong' => $request->input('id_user_ong'),
-            // 'id_profissional' => $request->input('id_profissional'),
-            // 'id_servico' => $request->input('id_servico')
-        ]);
+    //     $pedidoEnviado = PedidoOrcamento::create([
+    //         'descricao' => $request->input('descricao'),
+    //         'quantidade' => $request->input('quantidade'),
+    //         // 'id_user_contratante' => $request->input('id_user_contratante'),
+    //         // 'id_user_ong' => $request->input('id_user_ong'),
+    //         // 'id_profissional' => $request->input('id_profissional'),
+    //         // 'id_servico' => $request->input('id_servico')
+    //     ]);
 
-        return view('adm.pedidos-enviados')->with('pedidos-enviados', $pedidoEnviado);
-    }
+    //     return view('adm.pedidos-enviados')->with('pedidos-enviados', $pedidoEnviado);
+    // }
 }

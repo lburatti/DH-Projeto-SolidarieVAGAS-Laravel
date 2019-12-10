@@ -9,6 +9,8 @@ Route::get('/', function () {
 Route::get('/busca', 'BuscaController@index')->name('busca.index');
 // pesquisar
 Route::get('/busca/pesquisar', 'BuscaController@pesquisar')->name('busca.pesquisar');
+// criar
+Route::post('/busca/criar', 'BuscaController@create')->name('busca.criar');
 
 //SERVICOS
 Route::get('/servicos', function () {
@@ -54,9 +56,6 @@ Route::post('/adm/niveis-acesso/excluir/{id}', 'Adm\NiveisAcessoController@exclu
 Route::get('/adm/usuarios', 'Adm\UsuariosController@index')->name('adm.usuarios.index');
 // pesquisar
 Route::get('/adm/usuarios/pesquisar', 'Adm\UsuariosController@pesquisar')->name('adm.usuarios.pesquisar');
-// // editar
-// Route::get('/adm/usuarios/editar/{id}', 'Adm\UsuariosController@editar')->name('adm.usuarios.editar');
-// Route::put('/adm/usuarios/editar/{id}', 'Adm\UsuariosController@atualizar')->name('adm.usuarios.atualizar');
 // excluir
 Route::post('/adm/usuarios/excluir/{id}', 'Adm\UsuariosController@excluir')->name('adm.usuarios.excluir');
 
@@ -103,15 +102,15 @@ Route::post('/adm/profissionais/excluir/{id}', 'Adm\ProfissionaisController@excl
 
 //PEDIDOS RECEBIDOS
 Route::get('/adm/pedidos-recebidos', 'Adm\PedidosRecebidosController@index')->name('adm.pedidos-recebidos.index');
-// criar
-Route::get('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criar')->name('adm.pedidos-recebidos.criar');
-Route::post('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criarNovo')->name('adm.pedidos-recebidos.criarNovo');
+// // criar
+// Route::get('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criar')->name('adm.pedidos-recebidos.criar');
+// Route::post('/adm/pedidos-recebidos/criar', 'Adm\PedidosRecebidosController@criarNovo')->name('adm.pedidos-recebidos.criarNovo');
 
 //PEDIDOS ENVIADOS
 Route::get('/adm/pedidos-enviados', 'Adm\PedidosEnviadosController@index')->name('adm.pedidos-enviados.index');
-// criar
-Route::get('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criar')->name('adm.pedidos-enviados.criar');
-Route::post('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criarNovo')->name('adm.pedidos-enviados.criarNovo');
+// // criar
+// Route::get('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criar')->name('adm.pedidos-enviados.criar');
+// Route::post('/adm/pedidos-enviados/criar', 'Adm\PedidosEnviadosController@criarNovo')->name('adm.pedidos-enviados.criarNovo');
 
 //CADASTRO PROFISSIONAIS
 Route::get('/adm/cadastro-profissionais', function () {

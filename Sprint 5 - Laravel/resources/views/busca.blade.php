@@ -59,7 +59,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ url('/adm/profissionais/criar') }}" method="POST" class="form-row" enctype="multipart/form-data">
+                <form action="{{ url('/busca/criar') }}" method="POST" class="form-row" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('POST') }}
                     <!-- <div id="texto-login-cadastro" class="form-group col-md-12">
