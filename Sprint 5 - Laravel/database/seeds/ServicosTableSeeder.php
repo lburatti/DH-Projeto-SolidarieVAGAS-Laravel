@@ -7,14 +7,51 @@ class ServicosTableSeeder extends Seeder
 {
     public function run()
     {
-        for($i=0; $i < 10; $i++) {
-            $servicos = new Servico;
+        $servico1 = new Servico();
 
-            $servicos->nome = 'Pintor '.$i;
-            $servicos->descricao = 'Pintura de casas '.$i;
+        $servico1->nome = 'Eletrecista';
+        $servico1->descricao = 'Reparos elétricos, tomadas, etc.';
 
-            $servicos->save();
+        $servico1->save();
 
-        }
+        $servico2 = new Servico();
+
+        $servico2->nome = 'Pintor(a)';
+        $servico2->descricao = 'Pintura de casas, apartamentos, etc.';
+
+        $servico2->save();
+
+        $servico3 = new Servico();
+
+        $servico3->nome = 'Costureiro(a)';
+        $servico3->descricao = 'Vestidos, ajustes e reformas de roupas';
+
+        $servico3->save();
+
+        $servico4 = new Servico();
+
+        $servico4->nome = 'Cozinheiro(a)';
+        $servico4->descricao = 'Bolos, doces, salgados, etc.';
+
+        $servico4->save();
+
+
+        // ([
+        //     ['nome' => 'Eletrecista',
+        //     'descricao' => 'Reparos elétricos, tomadas, etc.'],
+        //     ['nome' => 'Pintor(a)',
+        //     'descricao' => 'Pintura de casas, apartamentos, etc.'],
+        //     ['nome' => 'Costureiro(a)',
+        //     'descricao' => 'Vestidos, ajustes e reformas de roupas'],
+        //     ['nome' => 'Cozinheiro(a)',
+        //     'descricao' => 'Bolos, doces, salgados, etc.'],
+        //     ['nome' => 'Programador(a)',
+        //     'descricao' => 'Sites, sistemas, etc.'],
+        //     ['nome' => 'Cuidador(a)',
+        //     'descricao' => 'Cuidador de idosos, crianças e etc'],
+        //     ['nome' => 'Jardineiro(a)',
+        //     'descricao' => 'Reparos e manutenção de jardins']
+        // ]);
+        // $servico->save();
     }
 }

@@ -14,6 +14,8 @@
                             <option selected disabled value="nivel_acesso">Escolha seu perfil:</option>
                             <option value="2">Contratante</option>
                             <option value="3">ONG</option>
+                            <option value="2">Admin</option>
+
                         </select>
                         @error('nivel_acesso')
                         <span class="invalid-feedback" role="alert">

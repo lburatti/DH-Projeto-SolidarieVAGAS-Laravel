@@ -11,6 +11,6 @@ class Servico extends Model
     protected $guarded = [];
 
     protected $fillable = [
-        "nome", "descricao", "id_grupo_servicos"
+        "nome", "descricao"
     ];
 }
